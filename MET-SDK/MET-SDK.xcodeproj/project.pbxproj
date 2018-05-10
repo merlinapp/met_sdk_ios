@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332F67468DE347CDF6313E0B /* Pods_MET_SDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46478867614D71EDFF1A5C7 /* Pods_MET_SDKTests.framework */; };
+		5544A1D3FDC81634971EE40A /* Pods_MET_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E877678A580E5D4D78AB32 /* Pods_MET_SDK.framework */; };
 		EB68134C20A4E8FA001E4DF6 /* MET_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB68134220A4E8F9001E4DF6 /* MET_SDK.framework */; };
 		EB68135120A4E8FA001E4DF6 /* MET_SDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68135020A4E8FA001E4DF6 /* MET_SDKTests.swift */; };
 		EB68135320A4E8FA001E4DF6 /* MET_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EB68134520A4E8F9001E4DF6 /* MET_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2146F0C332BD70851885B2A4 /* Pods-MET-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET-SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-MET-SDK/Pods-MET-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		3A67FB2FE9CBDDBB42C3376A /* Pods-MET-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET-SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MET-SDK/Pods-MET-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		7B267EFE55421E5320CA81A5 /* Pods-MET-SDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET-SDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MET-SDKTests/Pods-MET-SDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		85E877678A580E5D4D78AB32 /* Pods_MET_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MET_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46478867614D71EDFF1A5C7 /* Pods_MET_SDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MET_SDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB79F12FB0D8A8B1D1FEC0EF /* Pods-MET-SDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MET-SDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MET-SDKTests/Pods-MET-SDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB68134220A4E8F9001E4DF6 /* MET_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MET_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB68134520A4E8F9001E4DF6 /* MET_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MET_SDK.h; sourceTree = "<group>"; };
 		EB68134620A4E8F9001E4DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5544A1D3FDC81634971EE40A /* Pods_MET_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB68134C20A4E8FA001E4DF6 /* MET_SDK.framework in Frameworks */,
+				332F67468DE347CDF6313E0B /* Pods_MET_SDKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,8 @@
 				EB68134420A4E8F9001E4DF6 /* MET-SDK */,
 				EB68134F20A4E8FA001E4DF6 /* MET-SDKTests */,
 				EB68134320A4E8F9001E4DF6 /* Products */,
+				F73C1B0E27C07DCBA51EBD6D /* Pods */,
+				FF6E8EE9F19C5985ADD535D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +98,26 @@
 			path = "MET-SDKTests";
 			sourceTree = "<group>";
 		};
+		F73C1B0E27C07DCBA51EBD6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A67FB2FE9CBDDBB42C3376A /* Pods-MET-SDK.debug.xcconfig */,
+				2146F0C332BD70851885B2A4 /* Pods-MET-SDK.release.xcconfig */,
+				AB79F12FB0D8A8B1D1FEC0EF /* Pods-MET-SDKTests.debug.xcconfig */,
+				7B267EFE55421E5320CA81A5 /* Pods-MET-SDKTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF6E8EE9F19C5985ADD535D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E877678A580E5D4D78AB32 /* Pods_MET_SDK.framework */,
+				A46478867614D71EDFF1A5C7 /* Pods_MET_SDKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB68135620A4E8FA001E4DF6 /* Build configuration list for PBXNativeTarget "MET-SDK" */;
 			buildPhases = (
+				CCA64C8EF4FF64DE2B4963D5 /* [CP] Check Pods Manifest.lock */,
 				EB68133D20A4E8F9001E4DF6 /* Sources */,
 				EB68133E20A4E8F9001E4DF6 /* Frameworks */,
 				EB68133F20A4E8F9001E4DF6 /* Headers */,
 				EB68134020A4E8F9001E4DF6 /* Resources */,
+				EB68135C20A4FB61001E4DF6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -122,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB68135920A4E8FA001E4DF6 /* Build configuration list for PBXNativeTarget "MET-SDKTests" */;
 			buildPhases = (
+				12F811408EB6FD3DE5D86571 /* [CP] Check Pods Manifest.lock */,
 				EB68134720A4E8FA001E4DF6 /* Sources */,
 				EB68134820A4E8FA001E4DF6 /* Frameworks */,
 				EB68134920A4E8FA001E4DF6 /* Resources */,
@@ -188,6 +223,58 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F811408EB6FD3DE5D86571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MET-SDKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA64C8EF4FF64DE2B4963D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MET-SDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB68135C20A4FB61001E4DF6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n   \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB68133D20A4E8F9001E4DF6 /* Sources */ = {
@@ -338,6 +425,7 @@
 		};
 		EB68135720A4E8FA001E4DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A67FB2FE9CBDDBB42C3376A /* Pods-MET-SDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -348,11 +436,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "MET-SDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.merlinJobs.merlinqa.MET-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -363,6 +447,7 @@
 		};
 		EB68135820A4E8FA001E4DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2146F0C332BD70851885B2A4 /* Pods-MET-SDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -373,11 +458,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "MET-SDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.merlinJobs.merlinqa.MET-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -388,15 +469,12 @@
 		};
 		EB68135A20A4E8FA001E4DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB79F12FB0D8A8B1D1FEC0EF /* Pods-MET-SDKTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRNUGANDH7;
 				INFOPLIST_FILE = "MET-SDKTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.merlinJobs.merlinqa.MET-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -406,15 +484,12 @@
 		};
 		EB68135B20A4E8FA001E4DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B267EFE55421E5320CA81A5 /* Pods-MET-SDKTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRNUGANDH7;
 				INFOPLIST_FILE = "MET-SDKTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.merlinJobs.merlinqa.MET-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
