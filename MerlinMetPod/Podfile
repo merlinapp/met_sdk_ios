@@ -1,0 +1,13 @@
+platform :ios, '9.0'
+
+target 'MerlinMetPod' do
+
+  use_frameworks!
+  pod 'SwiftLint'
+  pod 'Moya'
+
+  target 'MerlinMetPodTests' do
+    inherit! :search_paths
+  end
+
+end

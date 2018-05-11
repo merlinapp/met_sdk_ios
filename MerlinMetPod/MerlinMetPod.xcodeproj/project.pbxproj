@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
+		86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */; };
+		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A941C5F63009AD886496D084 /* Pods_MerlinMetPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */; };
+		D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86FFC0BF20A5F58B005E7364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86FFC0AB20A5F58B005E7364 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86FFC0B320A5F58B005E7364;
+			remoteInfo = MerlinMetPod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerlinMetPodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.debug.xcconfig"; sourceTree = "<group>"; };
+		86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerlinMetPod.h; sourceTree = "<group>"; };
+		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerlinMetPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerlinMetPodTests.swift; sourceTree = "<group>"; };
+		86FFC0C420A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86FFC0B020A5F58B005E7364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FFC0BA20A5F58B005E7364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */,
+				A941C5F63009AD886496D084 /* Pods_MerlinMetPodTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86FFC0AA20A5F58B005E7364 = {
+			isa = PBXGroup;
+			children = (
+				86FFC0B620A5F58B005E7364 /* MerlinMetPod */,
+				86FFC0C120A5F58B005E7364 /* MerlinMetPodTests */,
+				86FFC0B520A5F58B005E7364 /* Products */,
+				B023CBF10272D06C820AFF42 /* Pods */,
+				870A96A2BC4CCE8945437C22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		86FFC0B520A5F58B005E7364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */,
+				86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86FFC0B620A5F58B005E7364 /* MerlinMetPod */ = {
+			isa = PBXGroup;
+			children = (
+				86FFC0D120A5F731005E7364 /* Models */,
+				86FFC0D020A5F71D005E7364 /* Services */,
+				86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */,
+				86FFC0B820A5F58B005E7364 /* Info.plist */,
+			);
+			path = MerlinMetPod;
+			sourceTree = "<group>";
+		};
+		86FFC0C120A5F58B005E7364 /* MerlinMetPodTests */ = {
+			isa = PBXGroup;
+			children = (
+				86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */,
+				86FFC0C420A5F58B005E7364 /* Info.plist */,
+			);
+			path = MerlinMetPodTests;
+			sourceTree = "<group>";
+		};
+		86FFC0D020A5F71D005E7364 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		86FFC0D120A5F731005E7364 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		870A96A2BC4CCE8945437C22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */,
+				25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B023CBF10272D06C820AFF42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */,
+				B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */,
+				36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */,
+				9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		86FFC0B120A5F58B005E7364 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		86FFC0B320A5F58B005E7364 /* MerlinMetPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FFC0C820A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPod" */;
+			buildPhases = (
+				0FEB79D80F1099D29EC008DF /* [CP] Check Pods Manifest.lock */,
+				86FFC0AF20A5F58B005E7364 /* Sources */,
+				86FFC0B020A5F58B005E7364 /* Frameworks */,
+				86FFC0B120A5F58B005E7364 /* Headers */,
+				86FFC0B220A5F58B005E7364 /* Resources */,
+				86FFC0CF20A5F675005E7364 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MerlinMetPod;
+			productName = MerlinMetPod;
+			productReference = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		86FFC0BC20A5F58B005E7364 /* MerlinMetPodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FFC0CB20A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPodTests" */;
+			buildPhases = (
+				89958FB01D8BCF66B5D0B5EA /* [CP] Check Pods Manifest.lock */,
+				86FFC0B920A5F58B005E7364 /* Sources */,
+				86FFC0BA20A5F58B005E7364 /* Frameworks */,
+				86FFC0BB20A5F58B005E7364 /* Resources */,
+				86FFC0CE20A5F62F005E7364 /* ShellScript */,
+				6E80DF797A5BA02776E599D5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86FFC0C020A5F58B005E7364 /* PBXTargetDependency */,
+			);
+			name = MerlinMetPodTests;
+			productName = MerlinMetPodTests;
+			productReference = 86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86FFC0AB20A5F58B005E7364 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Camila Gaitan Mosquera";
+				TargetAttributes = {
+					86FFC0B320A5F58B005E7364 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					86FFC0BC20A5F58B005E7364 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 86FFC0AE20A5F58B005E7364 /* Build configuration list for PBXProject "MerlinMetPod" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 86FFC0AA20A5F58B005E7364;
+			productRefGroup = 86FFC0B520A5F58B005E7364 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86FFC0B320A5F58B005E7364 /* MerlinMetPod */,
+				86FFC0BC20A5F58B005E7364 /* MerlinMetPodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86FFC0B220A5F58B005E7364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FFC0BB20A5F58B005E7364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FEB79D80F1099D29EC008DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MerlinMetPod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E80DF797A5BA02776E599D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86FFC0CE20A5F62F005E7364 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		86FFC0CF20A5F675005E7364 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n   \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		89958FB01D8BCF66B5D0B5EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MerlinMetPodTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86FFC0AF20A5F58B005E7364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FFC0B920A5F58B005E7364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86FFC0C020A5F58B005E7364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86FFC0B320A5F58B005E7364 /* MerlinMetPod */;
+			targetProxy = 86FFC0BF20A5F58B005E7364 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86FFC0C620A5F58B005E7364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		86FFC0C720A5F58B005E7364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		86FFC0C920A5F58B005E7364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YRNUGANDH7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MerlinMetPod/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPod;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86FFC0CA20A5F58B005E7364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YRNUGANDH7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = MerlinMetPod/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPod;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86FFC0CC20A5F58B005E7364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRNUGANDH7;
+				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86FFC0CD20A5F58B005E7364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRNUGANDH7;
+				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86FFC0AE20A5F58B005E7364 /* Build configuration list for PBXProject "MerlinMetPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FFC0C620A5F58B005E7364 /* Debug */,
+				86FFC0C720A5F58B005E7364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86FFC0C820A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FFC0C920A5F58B005E7364 /* Debug */,
+				86FFC0CA20A5F58B005E7364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86FFC0CB20A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FFC0CC20A5F58B005E7364 /* Debug */,
+				86FFC0CD20A5F58B005E7364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86FFC0AB20A5F58B005E7364 /* Project object */;
+}
