@@ -83,8 +83,6 @@
 		86FFC0B620A5F58B005E7364 /* MerlinMetPod */ = {
 			isa = PBXGroup;
 			children = (
-				86FFC0D120A5F731005E7364 /* Models */,
-				86FFC0D020A5F71D005E7364 /* Services */,
 				86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */,
 				86FFC0B820A5F58B005E7364 /* Info.plist */,
 			);
@@ -98,20 +96,6 @@
 				86FFC0C420A5F58B005E7364 /* Info.plist */,
 			);
 			path = MerlinMetPodTests;
-			sourceTree = "<group>";
-		};
-		86FFC0D020A5F71D005E7364 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		86FFC0D120A5F731005E7364 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		870A96A2BC4CCE8945437C22 /* Frameworks */ = {
