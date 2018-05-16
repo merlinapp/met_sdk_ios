@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86044AEC20AB80150042DDB3 /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86044AEB20AB80150042DDB3 /* EventsAPI.swift */; };
+		86541CDE20ACB305007F0122 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86541CDD20ACB305007F0122 /* Event.swift */; };
+		86541CE720ACDFC4007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
+		86541CEC20ACE6FB007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
 		86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
 		86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */; };
 		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +33,9 @@
 		36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.debug.xcconfig"; sourceTree = "<group>"; };
+		86044AEB20AB80150042DDB3 /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
+		86541CDD20ACB305007F0122 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		86541CE620ACDFC4007F0122 /* METRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = METRequest.json; sourceTree = "<group>"; };
 		86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerlinMetPod.h; sourceTree = "<group>"; };
 		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +67,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86044AEA20AB7FC00042DDB3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86044AEB20AB80150042DDB3 /* EventsAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		86044AEF20AB90F50042DDB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86541CDD20ACB305007F0122 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86044AF020AB90FC0042DDB3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		86044AF120AB93010042DDB3 /* StubData */ = {
+			isa = PBXGroup;
+			children = (
+				86541CE620ACDFC4007F0122 /* METRequest.json */,
+			);
+			path = StubData;
+			sourceTree = "<group>";
+		};
+		86541CDF20ACB926007F0122 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		86FFC0AA20A5F58B005E7364 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +128,11 @@
 		86FFC0B620A5F58B005E7364 /* MerlinMetPod */ = {
 			isa = PBXGroup;
 			children = (
+				86541CDF20ACB926007F0122 /* Handler */,
+				86044AF120AB93010042DDB3 /* StubData */,
+				86044AF020AB90FC0042DDB3 /* Persistence */,
+				86044AEF20AB90F50042DDB3 /* Models */,
+				86044AEA20AB7FC00042DDB3 /* Network */,
 				86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */,
 				86FFC0B820A5F58B005E7364 /* Info.plist */,
 			);
@@ -185,6 +235,7 @@
 				TargetAttributes = {
 					86FFC0B320A5F58B005E7364 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					86FFC0BC20A5F58B005E7364 = {
 						CreatedOnToolsVersion = 9.3;
@@ -214,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86541CE720ACDFC4007F0122 /* METRequest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86541CEC20ACE6FB007F0122 /* METRequest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86541CDE20ACB305007F0122 /* Event.swift in Sources */,
+				86044AEC20AB80150042DDB3 /* EventsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -481,6 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPod;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -517,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRNUGANDH7;
 				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;
@@ -536,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRNUGANDH7;
 				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;

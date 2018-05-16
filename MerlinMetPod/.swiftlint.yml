@@ -13,7 +13,6 @@ disabled_rules:
   - todo
   - type_body_length
   - variable_name
-included: 
-  - Source
+  - empty_enum_arguments
 excluded:
   - Pods
