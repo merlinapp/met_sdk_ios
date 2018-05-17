@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "86FFC0BC20A5F58B005E7364"
+               BlueprintIdentifier = "86DE4A9E20AE13C8004E6225"
                BuildableName = "MerlinMetPodTests.xctest"
                BlueprintName = "MerlinMetPodTests"
                ReferencedContainer = "container:MerlinMetPod.xcodeproj">

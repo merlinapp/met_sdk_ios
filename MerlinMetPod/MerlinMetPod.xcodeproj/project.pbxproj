@@ -10,24 +10,10 @@
 		86044AEC20AB80150042DDB3 /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86044AEB20AB80150042DDB3 /* EventsAPI.swift */; };
 		86541CDE20ACB305007F0122 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86541CDD20ACB305007F0122 /* Event.swift */; };
 		86541CE720ACDFC4007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
-		86541CEC20ACE6FB007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
 		869EE1A920ADD0AA002EF6B9 /* EventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EE1A820ADD0AA002EF6B9 /* EventsHandler.swift */; };
-		86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
-		86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */; };
 		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A941C5F63009AD886496D084 /* Pods_MerlinMetPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */; };
 		D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		86FFC0BF20A5F58B005E7364 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86FFC0AB20A5F58B005E7364 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 86FFC0B320A5F58B005E7364;
-			remoteInfo = MerlinMetPod;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerlinMetPodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +27,6 @@
 		86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerlinMetPod.h; sourceTree = "<group>"; };
 		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerlinMetPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerlinMetPodTests.swift; sourceTree = "<group>"; };
-		86FFC0C420A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.release.xcconfig"; sourceTree = "<group>"; };
 		B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,15 +37,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		86FFC0BA20A5F58B005E7364 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */,
-				A941C5F63009AD886496D084 /* Pods_MerlinMetPodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,13 +59,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		86044AF020AB90FC0042DDB3 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
 		86044AF120AB93010042DDB3 /* StubData */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				86FFC0B620A5F58B005E7364 /* MerlinMetPod */,
-				86FFC0C120A5F58B005E7364 /* MerlinMetPodTests */,
 				86FFC0B520A5F58B005E7364 /* Products */,
 				B023CBF10272D06C820AFF42 /* Pods */,
 				870A96A2BC4CCE8945437C22 /* Frameworks */,
@@ -123,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */,
-				86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,22 +98,12 @@
 			children = (
 				86541CDF20ACB926007F0122 /* Handler */,
 				86044AF120AB93010042DDB3 /* StubData */,
-				86044AF020AB90FC0042DDB3 /* Persistence */,
 				86044AEF20AB90F50042DDB3 /* Models */,
 				86044AEA20AB7FC00042DDB3 /* Network */,
 				86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */,
 				86FFC0B820A5F58B005E7364 /* Info.plist */,
 			);
 			path = MerlinMetPod;
-			sourceTree = "<group>";
-		};
-		86FFC0C120A5F58B005E7364 /* MerlinMetPodTests */ = {
-			isa = PBXGroup;
-			children = (
-				86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */,
-				86FFC0C420A5F58B005E7364 /* Info.plist */,
-			);
-			path = MerlinMetPodTests;
 			sourceTree = "<group>";
 		};
 		870A96A2BC4CCE8945437C22 /* Frameworks */ = {
@@ -205,27 +160,6 @@
 			productReference = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		86FFC0BC20A5F58B005E7364 /* MerlinMetPodTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 86FFC0CB20A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPodTests" */;
-			buildPhases = (
-				89958FB01D8BCF66B5D0B5EA /* [CP] Check Pods Manifest.lock */,
-				86FFC0B920A5F58B005E7364 /* Sources */,
-				86FFC0BA20A5F58B005E7364 /* Frameworks */,
-				86FFC0BB20A5F58B005E7364 /* Resources */,
-				86FFC0CE20A5F62F005E7364 /* ShellScript */,
-				6E80DF797A5BA02776E599D5 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				86FFC0C020A5F58B005E7364 /* PBXTargetDependency */,
-			);
-			name = MerlinMetPodTests;
-			productName = MerlinMetPodTests;
-			productReference = 86FFC0BD20A5F58B005E7364 /* MerlinMetPodTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,9 +173,6 @@
 					86FFC0B320A5F58B005E7364 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
-					};
-					86FFC0BC20A5F58B005E7364 = {
-						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
@@ -258,7 +189,6 @@
 			projectRoot = "";
 			targets = (
 				86FFC0B320A5F58B005E7364 /* MerlinMetPod */,
-				86FFC0BC20A5F58B005E7364 /* MerlinMetPodTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,14 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86541CE720ACDFC4007F0122 /* METRequest.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		86FFC0BB20A5F58B005E7364 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				86541CEC20ACE6FB007F0122 /* METRequest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,41 +223,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6E80DF797A5BA02776E599D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86FFC0CE20A5F62F005E7364 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
 		86FFC0CF20A5F675005E7364 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,24 +235,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n   \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		89958FB01D8BCF66B5D0B5EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MerlinMetPodTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -380,23 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86FFC0B920A5F58B005E7364 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		86FFC0C020A5F58B005E7364 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 86FFC0B320A5F58B005E7364 /* MerlinMetPod */;
-			targetProxy = 86FFC0BF20A5F58B005E7364 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		86FFC0C620A5F58B005E7364 /* Debug */ = {
@@ -575,46 +428,6 @@
 			};
 			name = Release;
 		};
-		86FFC0CC20A5F58B005E7364 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YRNUGANDH7;
-				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		86FFC0CD20A5F58B005E7364 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YRNUGANDH7;
-				INFOPLIST_FILE = MerlinMetPodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.merlinJobs.merlinqa.MerlinMetPodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,15 +445,6 @@
 			buildConfigurations = (
 				86FFC0C920A5F58B005E7364 /* Debug */,
 				86FFC0CA20A5F58B005E7364 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		86FFC0CB20A5F58B005E7364 /* Build configuration list for PBXNativeTarget "MerlinMetPodTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				86FFC0CC20A5F58B005E7364 /* Debug */,
-				86FFC0CD20A5F58B005E7364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
