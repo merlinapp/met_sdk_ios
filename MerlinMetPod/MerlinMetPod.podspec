@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "MerlinMetPod"
+  s.name         = "MerlinMet"
   s.version      = "1.0.0"
-  s.summary      = "The MerlinMetPod created to support and isolated the logic of the MET events from  the apps"
+  s.summary      = "The MerlinMet pod was created to support and isolated the logic of the MET events from  the apps"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
