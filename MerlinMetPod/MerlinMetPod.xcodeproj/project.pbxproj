@@ -11,6 +11,7 @@
 		86541CDE20ACB305007F0122 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86541CDD20ACB305007F0122 /* Event.swift */; };
 		86541CE720ACDFC4007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
 		86541CEC20ACE6FB007F0122 /* METRequest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86541CE620ACDFC4007F0122 /* METRequest.json */; };
+		869EE1A920ADD0AA002EF6B9 /* EventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EE1A820ADD0AA002EF6B9 /* EventsHandler.swift */; };
 		86FFC0BE20A5F58B005E7364 /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
 		86FFC0C320A5F58B005E7364 /* MerlinMetPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FFC0C220A5F58B005E7364 /* MerlinMetPodTests.swift */; };
 		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 		86044AEB20AB80150042DDB3 /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
 		86541CDD20ACB305007F0122 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		86541CE620ACDFC4007F0122 /* METRequest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = METRequest.json; sourceTree = "<group>"; };
+		869EE1A820ADD0AA002EF6B9 /* EventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHandler.swift; sourceTree = "<group>"; };
 		86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerlinMetPod.h; sourceTree = "<group>"; };
 		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		86541CDF20ACB926007F0122 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				869EE1A820ADD0AA002EF6B9 /* EventsHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			files = (
 				86541CDE20ACB305007F0122 /* Event.swift in Sources */,
 				86044AEC20AB80150042DDB3 /* EventsAPI.swift in Sources */,
+				869EE1A920ADD0AA002EF6B9 /* EventsHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
