@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.license      = "Apache License 2.0"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = { :type => "Apache License 2.0", :file => "../LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   # ――― Pod code Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.source       = { :git => "https://github.com/merlinapp/met_sdk_ios.git", :branch => "feature/met-pod-implementation",
-                   :tag => "v1.0.0" }
+                   :tag => "1.0.0" }
   # ――― Dependencies Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.dependency 'Moya'
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
-  s.source_files = "MerlinMetPod/**/*.{swift}"
+  s.source_files = "MerlinMetPod/*"
 
 
 end

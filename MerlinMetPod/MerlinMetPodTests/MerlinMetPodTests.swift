@@ -7,29 +7,50 @@
 //
 
 import XCTest
+import Moya
+@testable import MerlinMetPod
 
 class MerlinMetPodTests: XCTestCase {
-    
+    var jsonData = [String: Any]()
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let testBundle = Bundle(for: type(of: self))
+        let filePath = testBundle.path(forResource: "METRequest", ofType: "json")
+        let data = try? Data(contentsOf: URL(fileURLWithPath: filePath!))
+        jsonData = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String: Any]
     }
-    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        jsonData = [:]
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testMETWithWrongData() {
+        let expectation = XCTestExpectation(description: "MET with wrong data")
+        let provider = MoyaProvider<EventsAPI>(stubClosure: { (_: EventsAPI) -> Moya.StubBehavior in return .immediate })
+        provider.request(.createEventsBatch(parameters:["": ""])) { (result) in
+            switch result {
+            case let .success(moyaResponse):
+                //TODO: We need to change this validation when Eric changes the service
+                XCTAssertNotNil(moyaResponse.data)
+            case let .failure(error):
+                XCTAssertNotNil(error)
+            }
+            expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 1.0)
     }
-    
+    func testMETWithRightData() {
+        let expectation = XCTestExpectation(description: "MET with wrong data")
+        let provider = MoyaProvider<EventsAPI>(stubClosure: { (_: EventsAPI) -> Moya.StubBehavior in return .immediate })
+        provider.request(.createEventsBatch(parameters:["": jsonData])) { (result) in
+            switch result {
+            case let .success(moyaResponse):
+                XCTAssertNotNil(moyaResponse.data)
+            case let .failure(error):
+                print(error.errorDescription ?? "Error with  the met events")
+                XCTAssertNil(error)
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1.0)
+    }
 }
