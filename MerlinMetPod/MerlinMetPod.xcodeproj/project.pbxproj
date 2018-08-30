@@ -10,6 +10,7 @@
 		8642320221388A1A00175A61 /* EventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154321334C1F005163B7 /* EventWebService.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
+		864232332138A48700175A61 /* EnvironmentConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1535212DFB8F005163B7 /* EnvironmentConfiguration.plist */; };
 		8663D23D20AE1A8E00E4F90A /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
 		86DC1536212DFB8F005163B7 /* EnvironmentConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1535212DFB8F005163B7 /* EnvironmentConfiguration.plist */; };
 		86DC1538212E0292005163B7 /* EnvironmentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC1537212E0292005163B7 /* EnvironmentConfiguration.swift */; };
@@ -446,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864232332138A48700175A61 /* EnvironmentConfiguration.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
