@@ -15,7 +15,7 @@ enum EventAPI {
 
 extension EventAPI: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: EnvironmentConfiguration.sharedInstance.EventEndpoint()!)
+        guard let url = URL(string: "https://us-central1-merlin-qa.cloudfunctions.net/eventTracker")
             else { fatalError("baseURL could not be configured.")}
         return url
     }
