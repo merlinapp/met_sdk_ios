@@ -9,9 +9,9 @@
 import Foundation
 
 class SendEventUserCase: BaseUserCase, SendEventProtocol {
-    func execute(completion: @escaping EventResponseClosure) {
+    func execute(eventObject: MetEvent, completion: @escaping EventResponseClosure) {
         if let currentRepo = repository as? EventRepository {
-            currentRepo.sendEvent { (response) in
+            currentRepo.sendEvent(eventObject: eventObject) { (response) in
                 completion(response)
             }
         }

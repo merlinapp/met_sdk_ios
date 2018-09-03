@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860FE826213D89390015DEE5 /* MetEventCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE825213D89390015DEE5 /* MetEventCommon.swift */; };
+		860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE827213D89430015DEE5 /* MetEventProperties.swift */; };
+		860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		8642320221388A1A00175A61 /* EventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154321334C1F005163B7 /* EventWebService.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
@@ -53,6 +56,9 @@
 		36356CB3F3715686AB65E4F1 /* Pods-MerlinMetPodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerlinMetPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.debug.xcconfig"; sourceTree = "<group>"; };
+		860FE825213D89390015DEE5 /* MetEventCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEventCommon.swift; sourceTree = "<group>"; };
+		860FE827213D89430015DEE5 /* MetEventProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEventProperties.swift; sourceTree = "<group>"; };
+		860FE829213D8D000015DEE5 /* MetEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEvent.swift; sourceTree = "<group>"; };
 		864231FB2138852100175A61 /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 		8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlushEventWebServiceTest.swift; sourceTree = "<group>"; };
 		8663D23820AE1A8E00E4F90A /* MerlinMetPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerlinMetPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +212,9 @@
 		86DC1549213352CD005163B7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				860FE829213D8D000015DEE5 /* MetEvent.swift */,
+				860FE825213D89390015DEE5 /* MetEventCommon.swift */,
+				860FE827213D89430015DEE5 /* MetEventProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -547,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860FE826213D89390015DEE5 /* MetEventCommon.swift in Sources */,
 				86DC156021335975005163B7 /* SendEventProtocol.swift in Sources */,
 				86DC155521335576005163B7 /* EventUserCaseLocator.swift in Sources */,
 				86DC154E213353D4005163B7 /* BaseUserCaseLocator.swift in Sources */,
@@ -554,12 +564,14 @@
 				86DC154621335048005163B7 /* Network.swift in Sources */,
 				86DC154C213353C7005163B7 /* BaseUserCase.swift in Sources */,
 				86DC154821335249005163B7 /* BaseWebService.swift in Sources */,
+				860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */,
 				86DC155C21335844005163B7 /* WebServiceLocator.swift in Sources */,
 				86DC154421334C1F005163B7 /* EventWebService.swift in Sources */,
 				86DC155A21335600005163B7 /* EventRepositoryProtocol.swift in Sources */,
 				86DC155221335490005163B7 /* Repository.swift in Sources */,
 				86DC154021334B40005163B7 /* EventNetworkProvider.swift in Sources */,
 				86DC155E21335969005163B7 /* SendEventUserCase.swift in Sources */,
+				860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */,
 				86DC1558213355E5005163B7 /* EventRepository.swift in Sources */,
 				86DC154221334C0D005163B7 /* EventWebServiceProtocol.swift in Sources */,
 			);

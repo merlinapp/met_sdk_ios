@@ -14,7 +14,7 @@ class EventRepository: EventRepositoryProtocol {
         let locator = webServiceLocator
         eventWebService = locator.getWebService(ofType: EventWebServiceProtocol.self)!
     }
-    func sendEvent(completion: @escaping EventResponseClosure) {
-        eventWebService.sendEvent(completion: completion)
+    func sendEvent(eventObject: MetEvent, completion: @escaping EventResponseClosure) {
+        eventWebService.sendEvent(eventObject: eventObject, completion: completion)
     }
 }

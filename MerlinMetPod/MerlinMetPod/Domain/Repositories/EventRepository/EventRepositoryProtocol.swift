@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EventRepositoryProtocol: Repository {
-    func sendEvent(completion: @escaping EventResponseClosure)
+    func sendEvent(eventObject: MetEvent, completion: @escaping EventResponseClosure)
 }

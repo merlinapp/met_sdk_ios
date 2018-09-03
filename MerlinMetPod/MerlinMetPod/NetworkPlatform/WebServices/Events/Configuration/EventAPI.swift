@@ -10,7 +10,7 @@ import Alamofire
 import Moya
 
 enum EventAPI {
-    case sendEvent()
+    case sendEvent(eventObject: MetEvent)
 }
 
 extension EventAPI: TargetType {
