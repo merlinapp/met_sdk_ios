@@ -15,5 +15,5 @@ enum EventResponse {
 typealias EventResponseClosure = (EventResponse) -> Void
 
 protocol EventWebServiceProtocol {
-    func sendEvent(eventObject: MetEvent, completion: @escaping (EventResponseClosure))
+    func sendEvent(completion: @escaping (EventResponseClosure))
 }

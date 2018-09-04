@@ -18,13 +18,12 @@ Pod::Spec.new do |s|
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.license      = "Apache License 2.0"
-  s.license      = { :type => "Apache License 2.0", :file => "LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.author             = { "Camila Gaitán Mosquera" => "camila@merlinjobs.com" }
+  s.author        = { "Camila Gaitán Mosquera" => "camila@merlinjobs.com" }
 
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -42,7 +41,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
-  s.source_files = "MerlinMetPod/**/*.{swift}"
+  s.source_files = "MerlinMetPod/*"
   s.exclude_files = "MerlinMetPod/Exclude", "MerlinMetPod/MerlinMetPodTests/"
 
 

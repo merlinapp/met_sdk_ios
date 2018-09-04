@@ -10,12 +10,12 @@ import Alamofire
 import Moya
 
 enum EventAPI {
-    case sendEvent(eventObject: MetEvent)
+    case sendEvent()
 }
 
 extension EventAPI: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: MerlinMetConfiguration.shared.URL)
+        guard let url = URL(string: "http:")
             else { fatalError("baseURL could not be configured.")}
         return url
     }

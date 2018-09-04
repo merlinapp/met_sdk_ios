@@ -22,7 +22,7 @@ class FlushEventWebServiceTest: XCTestCase {
         let expectation = XCTestExpectation(description: EventTestConstants.Expectations.sendEventFailureExpectation)
         let failureClosure = CustomClosureBuilder.eventClosure(statusCode: MerlinTestConstants.StatusCode.failureCodeResponse, isSuccess: false)
         webService = EventWebService(eventCustomClosure: failureClosure)
-        webService?.sendEvent(eventObject: eventObject!, completion: { (response) in
+        webService?.sendEvent(completion: { (response) in
             switch response {
             case .success:
                 XCTFail(MerlinTestConstants.AssertsMessage.failureResponse)
@@ -37,7 +37,7 @@ class FlushEventWebServiceTest: XCTestCase {
         let expectation = XCTestExpectation(description: EventTestConstants.Expectations.sendEventSuccessExpectation)
         let successClosure = CustomClosureBuilder.eventClosure(statusCode: MerlinTestConstants.StatusCode.successCodeResponse, isSuccess: false)
         webService = EventWebService(eventCustomClosure: successClosure)
-        webService?.sendEvent(eventObject: eventObject!, completion: { (response) in
+        webService?.sendEvent(completion: { (response) in
             switch response {
             case .success:
                 XCTFail(MerlinTestConstants.AssertsMessage.successResponse)

@@ -20,8 +20,8 @@ class EventWebService: BaseWebService, EventWebServiceProtocol {
     required init() {
         fatalError("init() has not been implemented")
     }
-    func sendEvent(eventObject: MetEvent, completion: @escaping (EventResponseClosure)) {
-        networkProvider.sendRequest(eventObject: eventObject) { (response) in
+    func sendEvent(completion: @escaping (EventResponseClosure)) {
+        networkProvider.sendRequest { (response) in
             switch response {
             case .success(_) :
                 completion(.success)

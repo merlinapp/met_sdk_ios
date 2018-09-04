@@ -20,8 +20,8 @@ class EventNetworkProvider: Network {
         }
         provider = MoyaProvider<EventAPI>(endpointClosure: customClosure!, stubClosure: MoyaProvider.immediatelyStub)
     }
-    func sendRequest(eventObject: MetEvent, completion: @escaping (ApiServiceResponse) -> Void) {
-        provider.request(.sendEvent(eventObject: eventObject)) { (result) in
+    func sendRequest(completion: @escaping (ApiServiceResponse) -> Void) {
+        provider.request(.sendEvent()) { (result) in
             switch result {
             case .success(_):
                 completion(.success(response: []) )
