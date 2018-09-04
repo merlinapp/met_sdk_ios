@@ -9,16 +9,12 @@
 import Foundation
 
 public class MerlinMetConfiguration: NSObject {
-    
     static let shared: MerlinMetConfiguration = MerlinMetConfiguration()
-    let URL: String = ""
-    
+    var URL: String = ""
     override init() {
         super.init()
     }
-    
-    public func initWithURL(URL:String) {
+    public func initWithURL(URL: String) {
         self.URL = URL
     }
-    
 }

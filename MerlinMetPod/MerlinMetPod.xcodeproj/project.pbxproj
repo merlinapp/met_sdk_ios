@@ -11,6 +11,8 @@
 		860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE827213D89430015DEE5 /* MetEventProperties.swift */; };
 		860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		860FE82D213F22580015DEE5 /* MerlinMetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */; };
+		860FE82E213F32290015DEE5 /* MerlinMetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */; };
+		860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		8642320221388A1A00175A61 /* EventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154321334C1F005163B7 /* EventWebService.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
@@ -555,11 +557,13 @@
 				86DC156B21335C25005163B7 /* Network.swift in Sources */,
 				86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */,
 				86DC156921335BB9005163B7 /* EventAPI.swift in Sources */,
+				860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */,
 				86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */,
 				86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */,
 				86DC156821335B7F005163B7 /* EventNetworkProvider.swift in Sources */,
 				8642320221388A1A00175A61 /* EventWebService.swift in Sources */,
 				8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */,
+				860FE82E213F32290015DEE5 /* MerlinMetConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

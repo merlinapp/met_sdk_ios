@@ -21,7 +21,7 @@ extension EventAPI: TargetType {
     }
     var path: String {
         switch self {
-        case .sendEvent:
+        case .sendEvent( _):
             return ""
         }
     }
@@ -30,7 +30,7 @@ extension EventAPI: TargetType {
     }
     var sampleData: Data {
         switch self {
-        case .sendEvent(_):
+        case .sendEvent( _):
             return "{success data }".data(using: String.Encoding.utf8)!
         }
     }

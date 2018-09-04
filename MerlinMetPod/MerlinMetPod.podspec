@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
   s.source_files = "MerlinMetPod/**/*.{swift}"
+  s.exclude_files = "MerlinMetPod/Exclude", "MerlinMetPod/MerlinMetPodTests/"
 
 
 end
