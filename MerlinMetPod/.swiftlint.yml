@@ -4,6 +4,9 @@ type_body_length: 500
 function_parameter_count: 7
 opt_in_rules:
   - empty_count
+  - operator_usage_whitespace
+  - closure_spacing
+  - multiline_parameters
 disabled_rules:
   - cyclomatic_complexity
   - conditional_binding_cascade
@@ -13,6 +16,6 @@ disabled_rules:
   - todo
   - type_body_length
   - variable_name
-  - empty_enum_arguments
+  - trailing_whitespace
 excluded:
   - Pods
