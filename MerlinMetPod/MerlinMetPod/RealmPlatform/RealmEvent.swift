@@ -13,5 +13,4 @@ class RealmEvent: Object {
     
     @objc dynamic var batchId: String? = nil
     @objc dynamic var jsonString: String? = nil
-    
 }
