@@ -40,9 +40,9 @@ Pod::Spec.new do |s|
   s.dependency 'SwiftLint'
 
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-   , 
-  s.source_files = "MerlinMetPod/MerlinMetPod/Domain/" , "MerlinMetPod/MerlinMetPod/Handler/", "MerlinMetPod/MerlinMetPod/Models/",  "MerlinMetPod/MerlinMetPod/Network/", "MerlinMetPod/MerlinMetPod/NetworkPlatform/", "MerlinMetPod/MerlinMetPod/Presentation/", "MerlinMetPod/MerlinMetPod/RealmPlatform/"
-  s.exclude_files = "MerlinMetPod/Exclude", "MerlinMetPod/MerlinMetPodTests/"
+  
+  s.source_files = "MerlinMetPod/MerlinMetPod/**/*.{swift}"
+  s.exclude_files = "MerlinMetPod/MerlinMetPodTests/"
 
 
 end
