@@ -15,7 +15,7 @@ enum EventAPI {
 
 extension EventAPI: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "http:")
+        guard let url = URL(string: "")
             else { fatalError("baseURL could not be configured.")}
         return url
     }
