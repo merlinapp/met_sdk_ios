@@ -41,6 +41,9 @@
 		86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156F21335C6C005163B7 /* EventsTestConstants.swift */; };
 		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */; };
+		DCBC4096214025F5009FCFB5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC4095214025F5009FCFB5 /* RealmManager.swift */; };
+		DCBC4097214025F5009FCFB5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC4095214025F5009FCFB5 /* RealmManager.swift */; };
+		DCBC40A12140393C009FCFB5 /* RealmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC409821403094009FCFB5 /* RealmEvent.swift */; };
 		FE34E841CAFB6C381E866DCF /* Pods_MerlinMetPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +94,8 @@
 		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.release.xcconfig"; sourceTree = "<group>"; };
 		B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.release.xcconfig"; sourceTree = "<group>"; };
+		DCBC4095214025F5009FCFB5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DCBC409821403094009FCFB5 /* RealmEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +143,6 @@
 				8663D23C20AE1A8E00E4F90A /* Info.plist */,
 			);
 			path = MerlinMetPodTests;
-			sourceTree = "<group>";
-		};
-		86DC152C212DF9EB005163B7 /* RealmPlatform */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RealmPlatform;
 			sourceTree = "<group>";
 		};
 		86DC152D212DF9EB005163B7 /* Domain */ = {
@@ -337,9 +335,9 @@
 				860FE82B213F221D0015DEE5 /* Presentation */,
 				86DC152D212DF9EB005163B7 /* Domain */,
 				86DC152E212DF9EC005163B7 /* NetworkPlatform */,
-				86DC152C212DF9EB005163B7 /* RealmPlatform */,
 				86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */,
 				86FFC0B820A5F58B005E7364 /* Info.plist */,
+				DCBC40942140236C009FCFB5 /* RealmPlatform */,
 			);
 			path = MerlinMetPod;
 			sourceTree = "<group>";
@@ -362,6 +360,15 @@
 				9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DCBC40942140236C009FCFB5 /* RealmPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				DCBC4095214025F5009FCFB5 /* RealmManager.swift */,
+				DCBC409821403094009FCFB5 /* RealmEvent.swift */,
+			);
+			path = RealmPlatform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,12 +509,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -552,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBC4097214025F5009FCFB5 /* RealmManager.swift in Sources */,
 				8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */,
 				86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */,
 				86DC156B21335C25005163B7 /* Network.swift in Sources */,
@@ -588,6 +600,8 @@
 				86DC154021334B40005163B7 /* EventNetworkProvider.swift in Sources */,
 				86DC155E21335969005163B7 /* SendEventUserCase.swift in Sources */,
 				860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */,
+				DCBC40A12140393C009FCFB5 /* RealmEvent.swift in Sources */,
+				DCBC4096214025F5009FCFB5 /* RealmManager.swift in Sources */,
 				86DC1558213355E5005163B7 /* EventRepository.swift in Sources */,
 				86DC154221334C0D005163B7 /* EventWebServiceProtocol.swift in Sources */,
 			);
