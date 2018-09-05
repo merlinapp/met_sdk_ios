@@ -6,6 +6,7 @@ target 'MerlinMetPod' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'Moya'
+  pod 'RealmSwift'
 
   target 'MerlinMetPodTests' do
     inherit! :search_paths
