@@ -9,12 +9,45 @@
 import Foundation
 
 public class MerlinMetConfiguration: NSObject {
-    static let shared: MerlinMetConfiguration = MerlinMetConfiguration()
+    
+    private static var instance: MerlinMetConfiguration?
+    static var shared: MerlinMetConfiguration {
+        if instance == nil {
+            instance = MerlinMetConfiguration()
+        }
+        return instance!
+    }
+    
     var URL: String = ""
+    var totalBatchGroup: Int = 30
+    
     override init() {
         super.init()
+//        setBatchTrigger()
     }
+    
     public func initWithURL(URL: String) {
         self.URL = URL
+        
+    }
+    
+    public func track(_ event: [String: Any]) {
+        
+    }
+    
+    private func setBatchTrigger() {
+        RealmManager.shared.sendBatchEvents = {[weak self] () in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.sendBatchEvents()
+        }
+    }
+    
+    private func sendBatchEvents() {
+        let eventsObject = RealmManager.shared.getAll(Class: RealmEvent.self)
+        for i in 0..<totalBatchGroup {
+            print(i)
+        }
+        
     }
 }
