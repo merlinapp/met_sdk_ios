@@ -43,6 +43,7 @@ class RealmManager {
     }
     
     func getAllWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) -> Results<T> {
+        realm = getRealmInstance()!
         var list: Results<T>? = nil
         list = realm.objects(Class).filter(equalParam)
         return list!
@@ -53,6 +54,8 @@ class RealmManager {
 //            realm.add(object, update: update)
 //            return
 //        }
+        realm = getRealmInstance()!
+//        realm.beginWrite()
         do {
             try realm.write {
                 realm.add(object, update: update)
@@ -61,13 +64,14 @@ class RealmManager {
             assertionFailure("Somethig went wrong with Realm (Write), error = \(error.description)")
         }
         
-        if getAll(Class: RealmEvent.self).count >= MerlinMetConfiguration.shared.totalBatchGroup {
+        if getAllWithPredicate(Class: RealmEvent.self, equalParam: NSPredicate(format: "batchId == nil")) .count >= MerlinMetConfiguration.shared.totalBatchGroup {
             sendBatchEvents?()
         }
         
     }
     
     func deleteWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) {
+        realm = getRealmInstance()!
         realm.beginWrite()
         let realmResults = realm.objects(Class).filter(equalParam)
         if !realmResults.isEmpty {
@@ -79,6 +83,7 @@ class RealmManager {
     }
     
     func deleteAllObject <T: Object> (Class: T.Type) -> Void {
+        realm = getRealmInstance()!
         realm.beginWrite()
         let realmResults = realm.objects(Class)
         if(!realmResults.isEmpty) {
@@ -90,6 +95,7 @@ class RealmManager {
     }
     
     func deleteSingleObject <T: Object> (Class: T.Type, value: Object) -> Void {
+        realm = getRealmInstance()!
         realm.beginWrite()
         realm.delete(value)
         try! realm.commitWrite()

@@ -8,6 +8,7 @@
 
 import XCTest
 import RealmSwift
+
 @testable import MerlinMetPod
 
 class MarioTest: XCTestCase {
@@ -18,7 +19,7 @@ class MarioTest: XCTestCase {
     }
     
     override func tearDown() {
-//        RealmManager.shared.deleteAllObject(Class: RealmEvent.self)
+        RealmManager.shared.deleteAllObject(Class: RealmEvent.self)
         super.tearDown()
     }
     
@@ -32,19 +33,26 @@ class MarioTest: XCTestCase {
             let batchID = UUID().uuidString
             let eventsObject = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
             
-//            for index in 0..<30 {
-//                let event = eventsObject[index]
-//                event.batchId = batchID
-//                RealmManager.shared.addObject(object: event, update: true)
-//                
-//                // Add and transform realm object to our model
-//                let ourEntitiEvent = event.jsonString
-//                // Now append in to array to send
-//                eventEntitiesToSend.events?.append(ourEntitiEvent!)
-//            }
+            guard eventsObject.count >= 30 else {
+                return
+            }
+            
+            for index in 0..<30 {
+                let event = eventsObject[0]
+                let realm = try! Realm()
+                try! realm.write {
+                    event.batchId = batchID
+                    realm.add(event, update: true)
+                }
+                // Add and transform realm object to our model
+                let ourEntitiEvent = event.jsonString
+                // Now append in to array to send
+                eventEntitiesToSend.events?.append(ourEntitiEvent!)
+            }
+            
             
             // IF Response is success we need delete the events
-            // RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: NSPredicate(format: "id == %@", eventEntitiesToSend))
+            RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: NSPredicate(format: "batchId == %@", batchID))
             
             // IF Response is Failure we need remove batchID
             
