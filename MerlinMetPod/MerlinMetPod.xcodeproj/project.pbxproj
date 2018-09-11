@@ -67,7 +67,6 @@
 		860FE827213D89430015DEE5 /* MetEventProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEventProperties.swift; sourceTree = "<group>"; };
 		860FE829213D8D000015DEE5 /* MetEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEvent.swift; sourceTree = "<group>"; };
 		860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerlinMetConfiguration.swift; sourceTree = "<group>"; };
-		864231FB2138852100175A61 /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 		8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlushEventWebServiceTest.swift; sourceTree = "<group>"; };
 		8663D23820AE1A8E00E4F90A /* MerlinMetPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerlinMetPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8663D23C20AE1A8E00E4F90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,14 +129,6 @@
 				DC6AFAC021407C430008E0E1 /* MetManager.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		864231FA2138852100175A61 /* Prueba */ = {
-			isa = PBXGroup;
-			children = (
-				864231FB2138852100175A61 /* Prueba.swift */,
-			);
-			path = Prueba;
 			sourceTree = "<group>";
 		};
 		8663D23920AE1A8E00E4F90A /* MerlinMetPodTests */ = {
@@ -329,7 +320,6 @@
 			children = (
 				86FFC0B620A5F58B005E7364 /* MerlinMetPod */,
 				8663D23920AE1A8E00E4F90A /* MerlinMetPodTests */,
-				864231FA2138852100175A61 /* Prueba */,
 				86FFC0B520A5F58B005E7364 /* Products */,
 				B023CBF10272D06C820AFF42 /* Pods */,
 				870A96A2BC4CCE8945437C22 /* Frameworks */,
