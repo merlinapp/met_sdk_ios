@@ -33,11 +33,12 @@ Pod::Spec.new do |s|
 
   # ――― Pod code Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source       = { :git => "https://github.com/merlinapp/met_sdk_ios.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/merlinapp/met_sdk_ios.git", :branch => "cgaitan/create-save-method" }
   # ――― Dependencies Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.dependency 'Moya'
   s.dependency 'SwiftLint'
+  s.dependency 'RealmSwift'
 
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
