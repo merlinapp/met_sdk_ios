@@ -44,7 +44,7 @@ public class MerlinMetConfiguration: NSObject {
     }
     
     private func sendBatchEvents() {
-        let eventsObject = RealmManager.shared.getAll(Class: RealmEvent.self)
+        _ = RealmManager.shared.getAll(Class: RealmEvent.self)
         for i in 0..<totalBatchGroup {
             print(i)
         }
