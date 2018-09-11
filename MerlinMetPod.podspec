@@ -38,6 +38,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'Moya'
   s.dependency 'SwiftLint'
+  s.dependency 'RealmSwift'
 
   # ――― Source Files Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
