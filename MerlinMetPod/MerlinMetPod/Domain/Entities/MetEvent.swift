@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MetEvent: Codable {
+public protocol MetEvent: Codable {
     var metCommon: Dictionary<String, Any>? { get set }
     var metBody: Dictionary<String, Any>? { get set }
 }

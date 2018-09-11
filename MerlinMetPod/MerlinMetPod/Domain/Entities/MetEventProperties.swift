@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MetEventProperties: Codable {
+public protocol MetEventProperties: Codable {
     var eventName: String? { get set }
     var screenName: String? { get set }
     var idEvent: String? { get set }
