@@ -23,6 +23,14 @@ class MarioTest: XCTestCase {
         super.tearDown()
     }
     
+    func testMerlinConf() {
+//        RealmManager.shared.deleteAllObject(Class: RealmEvent.self)
+        for _ in 0..<30 {
+            MerlinMetConfiguration.shared.trackEvent()
+        }
+    
+    }
+    
     func testExample() {
         let predicate = NSPredicate(format: "batchId == nil")
         
@@ -37,15 +45,16 @@ class MarioTest: XCTestCase {
                 return
             }
             
-            for index in 0..<30 {
-                let event = eventsObject[0]
-                let realm = try! Realm()
-                try! realm.write {
-                    event.batchId = batchID
-                    realm.add(event, update: true)
-                }
+            for _ in 0..<30 {
+                let eventObject = eventsObject[0]
+                RealmManager.shared.markWithBatchID(batchID, event: eventObject)
+//                let realm = try! Realm()
+//                try! realm.write {
+//                    event.batchId = batchID
+//                    realm.add(event, update: true)
+//                }
                 // Add and transform realm object to our model
-                let ourEntitiEvent = event.jsonString
+                let ourEntitiEvent = eventObject.jsonString
                 // Now append in to array to send
                 eventEntitiesToSend.events?.append(ourEntitiEvent!)
             }

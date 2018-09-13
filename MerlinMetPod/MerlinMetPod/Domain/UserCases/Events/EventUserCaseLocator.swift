@@ -16,7 +16,7 @@ class EventUserCaseLocator: BaseUserCaseLocatorProtocol {
     }
     func getUserCase<T>(ofType type: T.Type) -> T? {
         switch String(describing: type) {
-        case String(describing: send.self):
+        case String(describing: SendEventProtocol.self):
             return buildUseCase(type: SendEventUserCase.self)
         default:
             return nil

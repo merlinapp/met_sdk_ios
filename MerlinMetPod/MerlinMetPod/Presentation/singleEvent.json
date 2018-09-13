@@ -1,0 +1,23 @@
+{
+    "eventName": "view-job-preview",
+    "appsflyer": {
+        "idfa": "59A17311-87EB-4B66-B86A-823024F1FFB8",
+        "appsflyer_id": "1532430923817-9999896"
+    },
+    "idUser": "0d8c42fd-74b3-488a-8eac-1304ecbdb3a9",
+    "idEvent": "14BE2A4F-6B4C-4E6E-866E-1BEF2E3A5F53",
+    "eventCategory": "candidate-jobs",
+    "userRole": "Candidate",
+    "idJob": "c1244c3a-926d-4597-9fae-ac6081746549",
+    "screenName": "Candidate_Search",
+    "idUserCandidate": "0d8c42fd-74b3-488a-8eac-1304ecbdb3a9",
+    "timeStamp": 1536680703.1561871,
+    "properties": {
+        "filter_applied": true,
+        "screen_name": "Candidate_Search",
+        "filter_variant_radius": "Variant 1",
+        "event_category": "candidate-jobs",
+        "id_job_websafe": "agtzfm1lcmxpbi1xYXKNAQsSBFVzZXIiJGM2ZGYwYTJiLTBkMzctNDRjZS1iNGU3LTk5OWQxMmI1NGY0ZQwLEghFbXBsb3llciIkNTQ2ODRmODctOWRiMS00Njg0LTkwMWItNGNkZjQ5YjU5ZDQwDAsSA0pvYiIkYzEyNDRjM2EtOTI2ZC00NTk3LTlmYWUtYWM2MDgxNzQ2NTQ5DA",
+        "order": 1
+    }
+}

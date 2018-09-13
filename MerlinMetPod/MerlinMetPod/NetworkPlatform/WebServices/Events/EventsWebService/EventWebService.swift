@@ -10,6 +10,7 @@ import Foundation
 
 class EventWebService: BaseWebService, EventWebServiceProtocol {
     private var networkProvider: EventNetworkProvider
+    
     init?(eventCustomClosure: EventCustomClosure? = nil) {
         if let customClosure = eventCustomClosure {
             self.networkProvider = EventNetworkProvider(customClosure: customClosure)
@@ -18,10 +19,10 @@ class EventWebService: BaseWebService, EventWebServiceProtocol {
         self.networkProvider = EventNetworkProvider()
     }
     required init() {
-        fatalError("init() has not been implemented")
+        self.networkProvider = EventNetworkProvider()
     }
-    func sendEvent(completion: @escaping (EventResponseClosure)) {
-        networkProvider.sendRequest { (response) in
+    func sendEvent(eventObject: MetEvent, completion: @escaping (EventResponseClosure)) {
+        networkProvider.sendRequest(eventObject: eventObject) { (response) in
             switch response {
             case .success(_) :
                 completion(.success)

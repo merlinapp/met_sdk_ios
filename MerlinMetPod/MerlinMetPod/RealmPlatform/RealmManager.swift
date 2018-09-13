@@ -49,6 +49,18 @@ class RealmManager {
         return list!
     }
     
+    func markWithBatchID(_ batchID: String, event: RealmEvent) {
+        realm = getRealmInstance()!
+        do {
+            try realm.write {
+                event.batchId = batchID
+                realm.add(event, update: true)
+            }
+        } catch let error as NSError {
+            assertionFailure("Somethig went wrong with Realm (Write), error = \(error.description)")
+        }
+    }
+    
     func addObject(object: Object, update: Bool = false) {
 //        if realm.isInWriteTransaction {
 //            realm.add(object, update: update)
