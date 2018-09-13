@@ -12,7 +12,6 @@
 		860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		860FE82D213F22580015DEE5 /* MerlinMetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */; };
 		860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
-		8642320221388A1A00175A61 /* EventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154321334C1F005163B7 /* EventWebService.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
 		8663D23D20AE1A8E00E4F90A /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
@@ -33,8 +32,6 @@
 		86DC156021335975005163B7 /* SendEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC155F21335975005163B7 /* SendEventProtocol.swift */; };
 		86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156421335B34005163B7 /* MerlinTestConstants.swift */; };
 		86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156621335B45005163B7 /* CustomClosureBuilder.swift */; };
-		86DC156821335B7F005163B7 /* EventNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC153F21334B40005163B7 /* EventNetworkProvider.swift */; };
-		86DC156921335BB9005163B7 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC153D21334B30005163B7 /* EventAPI.swift */; };
 		86DC156B21335C25005163B7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154521335048005163B7 /* Network.swift */; };
 		86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154721335249005163B7 /* BaseWebService.swift */; };
 		86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156F21335C6C005163B7 /* EventsTestConstants.swift */; };
@@ -578,12 +575,9 @@
 				86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */,
 				86DC156B21335C25005163B7 /* Network.swift in Sources */,
 				86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */,
-				86DC156921335BB9005163B7 /* EventAPI.swift in Sources */,
 				860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */,
 				86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */,
 				86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */,
-				86DC156821335B7F005163B7 /* EventNetworkProvider.swift in Sources */,
-				8642320221388A1A00175A61 /* EventWebService.swift in Sources */,
 				DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */,
 				8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */,
 			);

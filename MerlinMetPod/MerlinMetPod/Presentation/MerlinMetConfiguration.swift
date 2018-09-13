@@ -40,6 +40,15 @@ public class MerlinMetConfiguration: NSObject {
             
             strongSelf.sendBatchEvents()
         }
+        
+        RealmManager.shared.sendSingleEventNow = {[weak self] () in
+            guard let strongSelf = self else { return }
+            
+        }
+    }
+    
+    public func forceSend() {
+        sendBatchEvents()
     }
     
     func sendBatchEvents() {
@@ -47,10 +56,6 @@ public class MerlinMetConfiguration: NSObject {
         let batchID = UUID().uuidString
         let eventsObjectToSend = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
         let totalEventsToSend = eventsObjectToSend.count
-        
-        guard totalEventsToSend >= totalBatchGroup else {
-            return
-        }
         
         var arrayEvents: [Any] = []
         

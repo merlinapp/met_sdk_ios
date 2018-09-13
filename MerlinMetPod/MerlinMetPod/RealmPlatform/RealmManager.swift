@@ -31,7 +31,7 @@ class RealmManager {
     }
     
     var sendBatchEvents: (() -> Void)?
-    var expectationFinish: (() -> Void)?
+    var sendSingleEventNow: (() -> Void)?
     
     private init() {
         realm = getRealmInstance()!

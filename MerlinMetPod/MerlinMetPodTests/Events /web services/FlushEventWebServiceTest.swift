@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import MerlinMetPod
 
 class FlushEventWebServiceTest: XCTestCase {
     var webService: EventWebService?
