@@ -63,12 +63,7 @@ class RealmManager {
     }
     
     func addObject(object: Object, update: Bool = false) {
-//        if realm.isInWriteTransaction {
-//            realm.add(object, update: update)
-//            return
-//        }
         realm = getRealmInstance()!
-//        realm.beginWrite()
         do {
             try realm.write {
                 realm.add(object, update: update)
