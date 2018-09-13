@@ -23,7 +23,6 @@ public class MerlinMetConfiguration: NSObject {
     
     override init() {
         super.init()
-        setBatchTrigger()
     }
     
     public func initWithURL(URL: String) {
@@ -35,7 +34,7 @@ public class MerlinMetConfiguration: NSObject {
         
     }
     
-    func setBatchTrigger() {
+    public func eventsSubscriber() {
         RealmManager.shared.sendBatchEvents = {[weak self] () in
             guard let strongSelf = self else { return }
             
@@ -46,8 +45,8 @@ public class MerlinMetConfiguration: NSObject {
     func sendBatchEvents() {
         let predicate = NSPredicate(format: "batchId == nil")
         let batchID = UUID().uuidString
-        let eventsObject = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
-        let totalEventsToSend = eventsObject.count
+        let eventsObjectToSend = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
+        let totalEventsToSend = eventsObjectToSend.count
         
         guard totalEventsToSend >= totalBatchGroup else {
             return
@@ -56,13 +55,13 @@ public class MerlinMetConfiguration: NSObject {
         var arrayEvents: [Any] = []
         
         for _ in 0..<totalEventsToSend {
-            let eventObject = eventsObject[0]
+            let eventObject = eventsObjectToSend[0]
             RealmManager.shared.markWithBatchID(batchID, event: eventObject)
             
             if let stringEvent = eventObject.jsonString, let stringData: Data = stringEvent.data(using: .utf8) {
                 var json: Any?
                 do {
-                    json = try JSONSerialization.jsonObject(with: stringData, options: .allowFragments) as? [String : Any]
+                    json = try JSONSerialization.jsonObject(with: stringData, options: .allowFragments) as? [String: Any]
                     arrayEvents.append(json!)
                 } catch {
                     continue
@@ -70,24 +69,37 @@ public class MerlinMetConfiguration: NSObject {
             }
         }
         
+        let useCaseLocator = EventUserCaseLocator.eventLocator
+        guard let useCase = useCaseLocator.getUserCase(ofType: SendEventProtocol.self) else { return }
+        
+        let header = getHeader()
+        useCase.execute(eventObject: header) { (response) in
+            let predicate = NSPredicate(format: "batchId == %@", batchID)
+            
+            switch response {
+            case .success:
+                RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: predicate)
+            case . failure:
+                let eventsObjectFailure = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
+                for _ in 0..<eventsObjectFailure.count {
+                    let eventObject = eventsObjectFailure[0]
+                    RealmManager.shared.markWithBatchID(nil, event: eventObject)
+                }
+            }
+        }
+    }
+    
+    private func getHeader()-> MetEvent {
         var header: [String: Any] = [:]
         header["deviceType"] = "x86_64"
         header["platform"] = "iOS"
         header["deviceId"] = "90E14551-DC73-4193-A91B-2E18705ACCB0"
         header["appVersion"] = "2.0.8"
-        header["events"] = arrayEvents
         header["keyClient"] = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcGlLZXlDcmVhdGlvbiIsImFwaUtleSI6IjI2MEQ5NzREQjg0NDZGNkFFMjY0MTRDNjJFRjg3RkU3RERBQzQyMDg4Q0U2ODlDODU4MzY4QzhCQ0YxQjI1NkIiLCJwbGF0Zm9ybSI6ImlPUyJ9.nYTxvoxE00G-ic_CqiaZN4_HKltYpgI3tbd8fRqIzW0"
-        let useCaseLocator = EventUserCaseLocator.eventLocator
-        
-        guard let useCase = useCaseLocator.getUserCase(ofType: SendEventProtocol.self) else { return }
-        
-        useCase.execute(eventObject: header) { (response) in
-            print(response)
-        }
-        
-        
+        return header
     }
     
+    // Here we recived tha data event and buid our entiti to save in realm
     func trackEvent() {
         let event = RealmEvent()
         event.id = UUID().uuidString
@@ -95,6 +107,7 @@ public class MerlinMetConfiguration: NSObject {
         RealmManager.shared.addObject(object: event)
     }
     
+    // Only for test
     private func getMockEventString() -> String {
         let stringEvent = """
                         {

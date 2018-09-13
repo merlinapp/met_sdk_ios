@@ -30,7 +30,8 @@ class RealmManager {
         return nil
     }
     
-    var sendBatchEvents: (() -> ())?
+    var sendBatchEvents: (() -> Void)?
+    var expectationFinish: (() -> Void)?
     
     private init() {
         realm = getRealmInstance()!
@@ -49,7 +50,7 @@ class RealmManager {
         return list!
     }
     
-    func markWithBatchID(_ batchID: String, event: RealmEvent) {
+    func markWithBatchID(_ batchID: String?, event: RealmEvent) {
         realm = getRealmInstance()!
         do {
             try realm.write {
@@ -94,16 +95,19 @@ class RealmManager {
         try! realm.commitWrite()
     }
     
-    func deleteAllObject <T: Object> (Class: T.Type) -> Void {
+    func deleteAllObject <T: Object> (Class: T.Type) {
         realm = getRealmInstance()!
-        realm.beginWrite()
+        
         let realmResults = realm.objects(Class)
         if(!realmResults.isEmpty) {
             for object in realmResults {
+                realm.beginWrite()
                 realm.delete(object)
+                try! realm.commitWrite()
             }
+            
         }
-        try! realm.commitWrite()
+        
     }
     
     func deleteSingleObject <T: Object> (Class: T.Type, value: Object) -> Void {
