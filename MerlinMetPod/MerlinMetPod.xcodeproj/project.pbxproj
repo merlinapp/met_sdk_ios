@@ -12,7 +12,6 @@
 		860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		860FE82D213F22580015DEE5 /* MerlinMetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */; };
 		860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
-		8642320221388A1A00175A61 /* EventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154321334C1F005163B7 /* EventWebService.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
 		8663D23D20AE1A8E00E4F90A /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
@@ -33,13 +32,12 @@
 		86DC156021335975005163B7 /* SendEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC155F21335975005163B7 /* SendEventProtocol.swift */; };
 		86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156421335B34005163B7 /* MerlinTestConstants.swift */; };
 		86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156621335B45005163B7 /* CustomClosureBuilder.swift */; };
-		86DC156821335B7F005163B7 /* EventNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC153F21334B40005163B7 /* EventNetworkProvider.swift */; };
-		86DC156921335BB9005163B7 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC153D21334B30005163B7 /* EventAPI.swift */; };
 		86DC156B21335C25005163B7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154521335048005163B7 /* Network.swift */; };
 		86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154721335249005163B7 /* BaseWebService.swift */; };
 		86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC156F21335C6C005163B7 /* EventsTestConstants.swift */; };
 		86FFC0C520A5F58B005E7364 /* MerlinMetPod.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FFC0B720A5F58B005E7364 /* MerlinMetPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D22C33239B6BE6CED817D0A9 /* Pods_MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8E59565317D77F4BDCCCEE /* Pods_MerlinMetPod.framework */; };
+		DC59E8492148584A0010B239 /* singleEvent.json in Resources */ = {isa = PBXBuildFile; fileRef = DC59E8482148584A0010B239 /* singleEvent.json */; };
 		DC6AFABE214077AE0008E0E1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABC214077AD0008E0E1 /* RealmManager.swift */; };
 		DC6AFABF214077AE0008E0E1 /* RealmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */; };
 		DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC2214082970008E0E1 /* MarioTest.swift */; };
@@ -93,6 +91,7 @@
 		86FFC0B820A5F58B005E7364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA4FAC0E31AC8B7DFD7E280 /* Pods-MerlinMetPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPodTests/Pods-MerlinMetPodTests.release.xcconfig"; sourceTree = "<group>"; };
 		B7F3BDCE9F8D97A3D5BF623F /* Pods-MerlinMetPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.release.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.release.xcconfig"; sourceTree = "<group>"; };
+		DC59E8482148584A0010B239 /* singleEvent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleEvent.json; sourceTree = "<group>"; };
 		DC6AFABC214077AD0008E0E1 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmEvent.swift; sourceTree = "<group>"; };
 		DC6AFAC2214082970008E0E1 /* MarioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioTest.swift; sourceTree = "<group>"; };
@@ -123,6 +122,7 @@
 		860FE82B213F221D0015DEE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DC59E8482148584A0010B239 /* singleEvent.json */,
 				860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */,
 			);
 			path = Presentation;
@@ -163,7 +163,6 @@
 		86DC152E212DF9EC005163B7 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				86DC1534212DFB14005163B7 /* Entities */,
 				86DC1533212DFB07005163B7 /* WebServices */,
 				86DC1532212DFAFD005163B7 /* Configuration */,
 			);
@@ -185,13 +184,6 @@
 				86DC153A212E02A9005163B7 /* Events */,
 			);
 			path = WebServices;
-			sourceTree = "<group>";
-		};
-		86DC1534212DFB14005163B7 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		86DC153A212E02A9005163B7 /* Events */ = {
@@ -469,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC59E8492148584A0010B239 /* singleEvent.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,12 +554,9 @@
 				86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */,
 				86DC156B21335C25005163B7 /* Network.swift in Sources */,
 				86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */,
-				86DC156921335BB9005163B7 /* EventAPI.swift in Sources */,
 				860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */,
 				86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */,
 				86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */,
-				86DC156821335B7F005163B7 /* EventNetworkProvider.swift in Sources */,
-				8642320221388A1A00175A61 /* EventWebService.swift in Sources */,
 				DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */,
 				8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */,
 			);

@@ -10,13 +10,16 @@ import Alamofire
 import Moya
 
 enum EventAPI {
-    case sendEvent()
+    case sendEvent(event: MetEvent)
 }
 
 extension EventAPI: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "")
-            else { fatalError("baseURL could not be configured.")}
+        guard let url = URL(string: MerlinMetConfiguration.shared.URL)
+            else {
+                fatalError("baseURL could not be configured.")
+                
+        }
         return url
     }
     var path: String {
@@ -42,8 +45,8 @@ extension EventAPI: TargetType {
     }
     var task: Task {
         switch self {
-        case .sendEvent :
-            return .requestParameters(parameters: ["deviceId": ""], encoding: JSONEncoding.default)
+        case .sendEvent(let event):
+            return .requestParameters(parameters: event, encoding: JSONEncoding.default)
         }
     }
     var headers: [String: String]? {
