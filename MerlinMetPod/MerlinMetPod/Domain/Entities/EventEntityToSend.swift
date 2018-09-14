@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct EventEntitiToSend {
+struct EventEntityToSend {
     var events:[String]?
 }

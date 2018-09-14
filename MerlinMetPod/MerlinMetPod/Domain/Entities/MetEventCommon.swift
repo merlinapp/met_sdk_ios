@@ -7,12 +7,13 @@
 //
 
 import Foundation
-public protocol MetEventCommon: Codable {
-    var appVersion: String? { get set }
-    var keyClient: String? { get set }
-    var batchId: String? { get set }
-    var deviceType: String? { get set }
-    var deviceLanguage: String? { get set }
-    var deviceId: String? { get set }
-    var platform: String? { get set }
+public class MetEventCommon: Codable {
+    var appVersion: String?
+    var keyClient: String?
+    var deviceType: String?
+    var deviceLanguage: String?
+    var deviceId: String?
+    var platform: String?
+    
+    public init() {}
 }

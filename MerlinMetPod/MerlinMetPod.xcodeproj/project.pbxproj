@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		860FE826213D89390015DEE5 /* MetEventCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE825213D89390015DEE5 /* MetEventCommon.swift */; };
 		860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE827213D89430015DEE5 /* MetEventProperties.swift */; };
-		860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
 		860FE82D213F22580015DEE5 /* MerlinMetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */; };
-		860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FE829213D8D000015DEE5 /* MetEvent.swift */; };
+		863AB21F214BB5C0004C5D8A /* MetEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863AB21E214BB5C0004C5D8A /* MetEvent.swift */; };
 		8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC154121334C0D005163B7 /* EventWebServiceProtocol.swift */; };
 		8642320621388B7300175A61 /* FlushEventWebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */; };
 		8663D23D20AE1A8E00E4F90A /* MerlinMetPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FFC0B420A5F58B005E7364 /* MerlinMetPod.framework */; };
@@ -41,7 +40,7 @@
 		DC6AFABE214077AE0008E0E1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABC214077AD0008E0E1 /* RealmManager.swift */; };
 		DC6AFABF214077AE0008E0E1 /* RealmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */; };
 		DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC2214082970008E0E1 /* MarioTest.swift */; };
-		DC6AFAC5214090DA0008E0E1 /* EventEntitiToSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC4214090DA0008E0E1 /* EventEntitiToSend.swift */; };
+		DC6AFAC5214090DA0008E0E1 /* EventEntityToSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC4214090DA0008E0E1 /* EventEntityToSend.swift */; };
 		FE34E841CAFB6C381E866DCF /* Pods_MerlinMetPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +61,8 @@
 		77FB95E65977287570C1016D /* Pods-MerlinMetPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerlinMetPod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MerlinMetPod/Pods-MerlinMetPod.debug.xcconfig"; sourceTree = "<group>"; };
 		860FE825213D89390015DEE5 /* MetEventCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEventCommon.swift; sourceTree = "<group>"; };
 		860FE827213D89430015DEE5 /* MetEventProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEventProperties.swift; sourceTree = "<group>"; };
-		860FE829213D8D000015DEE5 /* MetEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetEvent.swift; sourceTree = "<group>"; };
 		860FE82C213F22580015DEE5 /* MerlinMetConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerlinMetConfiguration.swift; sourceTree = "<group>"; };
+		863AB21E214BB5C0004C5D8A /* MetEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetEvent.swift; sourceTree = "<group>"; };
 		8642320521388B7300175A61 /* FlushEventWebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlushEventWebServiceTest.swift; sourceTree = "<group>"; };
 		8663D23820AE1A8E00E4F90A /* MerlinMetPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerlinMetPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8663D23C20AE1A8E00E4F90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +94,7 @@
 		DC6AFABC214077AD0008E0E1 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmEvent.swift; sourceTree = "<group>"; };
 		DC6AFAC2214082970008E0E1 /* MarioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioTest.swift; sourceTree = "<group>"; };
-		DC6AFAC4214090DA0008E0E1 /* EventEntitiToSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntitiToSend.swift; sourceTree = "<group>"; };
+		DC6AFAC4214090DA0008E0E1 /* EventEntityToSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntityToSend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,10 +216,10 @@
 		86DC1549213352CD005163B7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				860FE829213D8D000015DEE5 /* MetEvent.swift */,
+				863AB21E214BB5C0004C5D8A /* MetEvent.swift */,
 				860FE825213D89390015DEE5 /* MetEventCommon.swift */,
 				860FE827213D89430015DEE5 /* MetEventProperties.swift */,
-				DC6AFAC4214090DA0008E0E1 /* EventEntitiToSend.swift */,
+				DC6AFAC4214090DA0008E0E1 /* EventEntityToSend.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -554,7 +553,6 @@
 				86DC156721335B45005163B7 /* CustomClosureBuilder.swift in Sources */,
 				86DC156B21335C25005163B7 /* Network.swift in Sources */,
 				86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */,
-				860FE82F213F326F0015DEE5 /* MetEvent.swift in Sources */,
 				86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */,
 				86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */,
 				DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */,
@@ -574,7 +572,6 @@
 				86DC154621335048005163B7 /* Network.swift in Sources */,
 				86DC154C213353C7005163B7 /* BaseUserCase.swift in Sources */,
 				86DC154821335249005163B7 /* BaseWebService.swift in Sources */,
-				860FE82A213D8D000015DEE5 /* MetEvent.swift in Sources */,
 				86DC155C21335844005163B7 /* WebServiceLocator.swift in Sources */,
 				86DC154421334C1F005163B7 /* EventWebService.swift in Sources */,
 				86DC155A21335600005163B7 /* EventRepositoryProtocol.swift in Sources */,
@@ -584,8 +581,9 @@
 				86DC155E21335969005163B7 /* SendEventUserCase.swift in Sources */,
 				860FE828213D89430015DEE5 /* MetEventProperties.swift in Sources */,
 				DC6AFABF214077AE0008E0E1 /* RealmEvent.swift in Sources */,
-				DC6AFAC5214090DA0008E0E1 /* EventEntitiToSend.swift in Sources */,
+				DC6AFAC5214090DA0008E0E1 /* EventEntityToSend.swift in Sources */,
 				DC6AFABE214077AE0008E0E1 /* RealmManager.swift in Sources */,
+				863AB21F214BB5C0004C5D8A /* MetEvent.swift in Sources */,
 				86DC1558213355E5005163B7 /* EventRepository.swift in Sources */,
 				86DC154221334C0D005163B7 /* EventWebServiceProtocol.swift in Sources */,
 			);

@@ -19,25 +19,23 @@ public class MerlinMetConfiguration: NSObject {
     }
     
     var URL: String = ""
+    var eventHeader : MetEventCommon?
     var totalBatchGroup: Int = 10
     
     override init() {
         super.init()
     }
     
-    public func initWithURL(URL: String) {
+    public func setup(URL: String, eventHeader: MetEventCommon ) {
         self.URL = URL
-        
+        self.eventHeader = eventHeader
     }
     
-    public func saveEvent(_ event: String ) {
-        
-        let a = RealmEvent()
-        a.id = UUID().uuidString
-        a.jsonString = event
-        RealmManager.shared.addObject(object: a)
-        let get = RealmManager.shared.getAll(Class: RealmEvent.self)
-        print(get)
+    func saveEvent(eventString: String) {
+        let event = RealmEvent()
+        event.id = UUID().uuidString
+        event.jsonString = eventString
+        RealmManager.shared.addObject(object: event)
     }
     
     public func eventsSubscriber() {
@@ -48,7 +46,7 @@ public class MerlinMetConfiguration: NSObject {
         }
         
         RealmManager.shared.sendSingleEventNow = {[weak self] () in
-            guard let strongSelf = self else { return }
+            guard self != nil else { return }
             
         }
     }
@@ -102,49 +100,12 @@ public class MerlinMetConfiguration: NSObject {
     
     private func getHeader()-> MetEvent {
         var header: [String: Any] = [:]
-        header["deviceType"] = "x86_64"
-        header["platform"] = "iOS"
-        header["deviceId"] = "90E14551-DC73-4193-A91B-2E18705ACCB0"
-        header["appVersion"] = "2.0.8"
-        header["keyClient"] = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcGlLZXlDcmVhdGlvbiIsImFwaUtleSI6IjI2MEQ5NzREQjg0NDZGNkFFMjY0MTRDNjJFRjg3RkU3RERBQzQyMDg4Q0U2ODlDODU4MzY4QzhCQ0YxQjI1NkIiLCJwbGF0Zm9ybSI6ImlPUyJ9.nYTxvoxE00G-ic_CqiaZN4_HKltYpgI3tbd8fRqIzW0"
+        header["deviceType"] = eventHeader?.deviceType
+        header["deviceLanguage"] = eventHeader?.deviceLanguage
+        header["platform"] = eventHeader?.platform
+        header["deviceId"] = eventHeader?.deviceId
+        header["appVersion"] = eventHeader?.appVersion
+        header["keyClient"] = eventHeader?.keyClient
         return header
-    }
-    
-    // Here we recived tha data event and buid our entiti to save in realm
-    func trackEvent() {
-        let event = RealmEvent()
-        event.id = UUID().uuidString
-        event.jsonString = getMockEventString()
-        RealmManager.shared.addObject(object: event)
-    }
-    
-    // Only for test
-    private func getMockEventString() -> String {
-        let stringEvent = """
-                        {
-                            "eventName": "view-job-preview",
-                            "appsflyer": {
-                                "idfa": "59A17311-87EB-4B66-B86A-823024F1FFB8",
-                                "appsflyer_id": "1532430923817-9999896"
-                            },
-                            "idUser": "0d8c42fd-74b3-488a-8eac-1304ecbdb3a9",
-                            "idEvent": "\(UUID().uuidString)",
-                            "eventCategory": "candidate-jobs",
-                            "userRole": "Candidate",
-                            "idJob": "c1244c3a-926d-4597-9fae-ac6081746549",
-                            "screenName": "Candidate_Search",
-                            "idUserCandidate": "0d8c42fd-74b3-488a-8eac-1304ecbdb3a9",
-                            "timeStamp": 1536680703.1561871,
-                            "properties": {
-                                "filter_applied": "true",
-                                "screen_name": "Candidate_Search",
-                                "filter_variant_radius": "Variant 1",
-                                "event_category": "candidate-jobs",
-                                "id_job_websafe": "agtzfm1lcmxpbi1xYXKNAQsSBFVzZXIiJGM2ZGYwYTJiLTBkMzctNDRjZS1iNGU3LTk5OWQxMmI1NGY0ZQwLEghFbXBsb3llciIkNTQ2ODRmODctOWRiMS00Njg0LTkwMWItNGNkZjQ5YjU5ZDQwDAsSA0pvYiIkYzEyNDRjM2EtOTI2ZC00NTk3LTlmYWUtYWM2MDgxNzQ2NTQ5DA",
-                                "order": "1"
-                            }
-                        }
-                        """
-        return stringEvent
     }
 }
