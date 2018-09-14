@@ -175,7 +175,6 @@
 		86DC152E212DF9EC005163B7 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				86DC1534212DFB14005163B7 /* Entities */,
 				86DC1533212DFB07005163B7 /* WebServices */,
 				86DC1532212DFAFD005163B7 /* Configuration */,
 			);
@@ -197,13 +196,6 @@
 				86DC153A212E02A9005163B7 /* Events */,
 			);
 			path = WebServices;
-			sourceTree = "<group>";
-		};
-		86DC1534212DFB14005163B7 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		86DC153A212E02A9005163B7 /* Events */ = {
