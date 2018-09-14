@@ -10,8 +10,8 @@ import Foundation
 
 public class MerlinMetConfiguration: NSObject {
     
-    private static var instance: MerlinMetConfiguration?
-    static var shared: MerlinMetConfiguration {
+    public static var instance: MerlinMetConfiguration?
+    public static var shared: MerlinMetConfiguration {
         if instance == nil {
             instance = MerlinMetConfiguration()
         }
@@ -31,7 +31,7 @@ public class MerlinMetConfiguration: NSObject {
         self.eventHeader = eventHeader
     }
     
-    func saveEvent(eventString: String) {
+    public func saveEvent(eventString: String) {
         let event = RealmEvent()
         event.id = UUID().uuidString
         event.jsonString = eventString

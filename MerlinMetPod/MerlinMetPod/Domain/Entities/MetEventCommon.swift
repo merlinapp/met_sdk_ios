@@ -8,12 +8,12 @@
 
 import Foundation
 public class MetEventCommon: Codable {
-    var appVersion: String?
-    var keyClient: String?
-    var deviceType: String?
-    var deviceLanguage: String?
-    var deviceId: String?
-    var platform: String?
+    public var appVersion: String?
+    public var keyClient: String?
+    public var deviceType: String?
+    public var deviceLanguage: String?
+    public var deviceId: String?
+    public var platform: String?
     
     public init() {}
 }

@@ -10,10 +10,14 @@ import Foundation
 
 public class MetEventProperties: Codable {
     public var eventName: String?
+    public var eventCategory: String?
     public var screenName: String?
     public var idEvent: String?
     public var idUser: String?
-    public var timestamp: String?
+    public var idJob: String?
+    public var idUserEmployer: String?
+    public var idUserCandidate: String?
+    public var timestamp: Double?
     public var properties: Dictionary<String,String>?
     
     public init() {}
