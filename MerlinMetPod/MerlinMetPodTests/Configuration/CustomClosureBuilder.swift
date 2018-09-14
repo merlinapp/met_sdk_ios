@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
 import Moya
+@testable import MerlinMetPod
 
 class CustomClosureBuilder: NSObject {
     static func eventClosure(statusCode: Int, isSuccess: Bool) -> EventCustomClosure {

@@ -11,6 +11,11 @@ import RealmSwift
 
 class RealmEvent: Object {
     
-    @objc dynamic var batchId: String? = nil
-    @objc dynamic var jsonString: String? = nil
+    @objc dynamic var id: String?
+    @objc dynamic var jsonString: String?
+    @objc dynamic var batchId: String?
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
