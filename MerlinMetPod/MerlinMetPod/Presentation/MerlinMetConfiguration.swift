@@ -30,8 +30,14 @@ public class MerlinMetConfiguration: NSObject {
         
     }
     
-    public func track(_ event: [String: Any]) {
+    public func saveEvent(_ event: String ) {
         
+        let a = RealmEvent()
+        a.id = UUID().uuidString
+        a.jsonString = event
+        RealmManager.shared.addObject(object: a)
+        let get = RealmManager.shared.getAll(Class: RealmEvent.self)
+        print(get)
     }
     
     public func eventsSubscriber() {

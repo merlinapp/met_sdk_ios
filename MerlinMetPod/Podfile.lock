@@ -19,7 +19,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Moya
     - Realm
@@ -38,4 +38,4 @@ SPEC CHECKSUMS:
 PODFILE CHECKSUM: c3e4dda2dec8994de82b7123928502a1a54aec46
 
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

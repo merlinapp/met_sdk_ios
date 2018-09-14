@@ -8,11 +8,13 @@
 
 import Foundation
 
-protocol MetEventProperties: Codable {
-    var eventName: String? { get set }
-    var screenName: String? { get set }
-    var idEvent: String? { get set }
-    var idUser: String? { get set }
-    var timestamp: Date? { get set }
-    var properties: Dictionary<String, Any>? { get set }
+public class MetEventProperties: Codable {
+    public var eventName: String?
+    public var screenName: String?
+    public var idEvent: String?
+    public var idUser: String?
+    public var timestamp: String?
+    public var properties: Dictionary<String,String>?
+    
+    public init() {}
 }
