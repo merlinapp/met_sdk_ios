@@ -81,7 +81,8 @@ public class MerlinMetConfiguration: NSObject {
         let useCaseLocator = EventUserCaseLocator.eventLocator
         guard let useCase = useCaseLocator.getUserCase(ofType: SendEventProtocol.self) else { return }
         
-        let header = getHeader()
+        var header = getHeader()
+        header["events"] = arrayEvents
         useCase.execute(eventObject: header) { (response) in
             let predicate = NSPredicate(format: "batchId == %@", batchID)
             
