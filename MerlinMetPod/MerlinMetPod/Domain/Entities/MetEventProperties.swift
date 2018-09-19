@@ -18,7 +18,7 @@ public class MetEventProperties: Codable {
     public var idUserEmployer: String?
     public var idUserCandidate: String?
     public var appsflyer: Dictionary<String,String>?
-    public var timestamp: Double?
+    public var timeStamp: Double?
     public var properties: Dictionary<String,String>?
     
     public init() {}

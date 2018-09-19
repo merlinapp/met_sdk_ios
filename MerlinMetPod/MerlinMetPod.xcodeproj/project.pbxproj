@@ -39,7 +39,6 @@
 		DC59E8492148584A0010B239 /* singleEvent.json in Resources */ = {isa = PBXBuildFile; fileRef = DC59E8482148584A0010B239 /* singleEvent.json */; };
 		DC6AFABE214077AE0008E0E1 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABC214077AD0008E0E1 /* RealmManager.swift */; };
 		DC6AFABF214077AE0008E0E1 /* RealmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */; };
-		DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC2214082970008E0E1 /* MarioTest.swift */; };
 		DC6AFAC5214090DA0008E0E1 /* EventEntityToSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AFAC4214090DA0008E0E1 /* EventEntityToSend.swift */; };
 		FE34E841CAFB6C381E866DCF /* Pods_MerlinMetPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F5EBE00BD35FA3E3A43A54 /* Pods_MerlinMetPodTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,7 +92,6 @@
 		DC59E8482148584A0010B239 /* singleEvent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleEvent.json; sourceTree = "<group>"; };
 		DC6AFABC214077AD0008E0E1 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DC6AFABD214077AD0008E0E1 /* RealmEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmEvent.swift; sourceTree = "<group>"; };
-		DC6AFAC2214082970008E0E1 /* MarioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioTest.swift; sourceTree = "<group>"; };
 		DC6AFAC4214090DA0008E0E1 /* EventEntityToSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntityToSend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +131,6 @@
 				86DC156221335AFA005163B7 /* Events  */,
 				86DC156121335AF3005163B7 /* Configuration */,
 				8663D23C20AE1A8E00E4F90A /* Info.plist */,
-				DC6AFAC2214082970008E0E1 /* MarioTest.swift */,
 			);
 			path = MerlinMetPodTests;
 			sourceTree = "<group>";
@@ -555,7 +552,6 @@
 				86DC156C21335C27005163B7 /* BaseWebService.swift in Sources */,
 				86DC156521335B34005163B7 /* MerlinTestConstants.swift in Sources */,
 				86DC157021335C6C005163B7 /* EventsTestConstants.swift in Sources */,
-				DC6AFAC3214082970008E0E1 /* MarioTest.swift in Sources */,
 				8642320321388A5A00175A61 /* EventWebServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
