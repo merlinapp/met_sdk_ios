@@ -38,6 +38,29 @@ public class MerlinMetConfiguration: NSObject {
         RealmManager.shared.addObject(object: event)
     }
     
+    public func getEvent(event: String) -> [String:Any] {
+        
+        var arrayEvents: [Any] = []
+        var eventBody: MetEvent = [:]
+        let stringData: Data = event.data(using: .utf8)!
+        
+        if(!stringData.isEmpty){
+            var json: Any?
+            do {
+                json = try JSONSerialization.jsonObject(with: stringData, options: .allowFragments) as? [String: Any]
+                arrayEvents.append(json!)
+                
+                eventBody = getHeader()
+                eventBody["events"] = arrayEvents
+                
+            } catch {
+                print("Unexpected error: \(error)")
+            }
+        }
+        
+        return eventBody
+    }
+    
     public func eventsSubscriber() {
         RealmManager.shared.sendBatchEvents = {[weak self] () in
             guard let strongSelf = self else { return }
