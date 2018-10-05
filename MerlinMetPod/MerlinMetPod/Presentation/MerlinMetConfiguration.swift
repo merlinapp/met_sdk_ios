@@ -19,8 +19,12 @@ public class MerlinMetConfiguration: NSObject {
     }
     
     var URL: String = ""
-    var eventHeader : MetEventCommon?
+    var eventHeader: MetEventCommon?
     var totalBatchGroup: Int = 10
+    
+    // Use this properties only for UT propose
+    var sendEventCustomClosureTest: EventCustomClosure?
+    var closureForTestResponse: ((Bool)->())?
     
     override init() {
         super.init()
@@ -38,13 +42,13 @@ public class MerlinMetConfiguration: NSObject {
         RealmManager.shared.addObject(object: event)
     }
     
-    public func getEvent(event: String) -> [String:Any] {
+    public func getEvent(event: String) -> [String: Any] {
         
         var arrayEvents: [Any] = []
         var eventBody: MetEvent = [:]
         let stringData: Data = event.data(using: .utf8)!
         
-        if(!stringData.isEmpty){
+        if !stringData.isEmpty {
             var json: Any?
             do {
                 json = try JSONSerialization.jsonObject(with: stringData, options: .allowFragments) as? [String: Any]
@@ -106,23 +110,30 @@ public class MerlinMetConfiguration: NSObject {
         
         var header = getHeader()
         header["events"] = arrayEvents
-        useCase.execute(eventObject: header) { (response) in
+        
+        setTestClosureForSendEvent(useCase: useCase)
+        
+        useCase.execute(eventObject: header) { [weak self] (response) in
+            guard let strongSelf = self else { return }
+            
             let predicate = NSPredicate(format: "batchId == %@", batchID)
             
             switch response {
             case .success:
                 RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: predicate)
+                strongSelf.closureForTestResponse?(true)
             case . failure:
                 let eventsObjectFailure = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
                 for _ in 0..<eventsObjectFailure.count {
                     let eventObject = eventsObjectFailure[0]
                     RealmManager.shared.markWithBatchID(nil, event: eventObject)
                 }
+                strongSelf.closureForTestResponse?(false)
             }
         }
     }
     
-    private func getHeader()-> MetEvent {
+    private func getHeader() -> MetEvent {
         var header: [String: Any] = [:]
         header["deviceType"] = eventHeader?.deviceType
         header["deviceLanguage"] = eventHeader?.deviceLanguage
@@ -131,5 +142,15 @@ public class MerlinMetConfiguration: NSObject {
         header["appVersion"] = eventHeader?.appVersion
         header["keyClient"] = eventHeader?.keyClient
         return header
+    }
+    
+     private func setTestClosureForSendEvent(useCase: SendEventProtocol) {
+        if let customClosure = sendEventCustomClosureTest,
+            let useCaseSendEvent = useCase as? SendEventUserCase,
+            let repo = useCaseSendEvent.repository as? EventRepository,
+            let webServ = repo.eventWebService as? EventWebService {
+            
+            webServ.networkProvider = EventNetworkProvider.init(customClosure: customClosure)
+        }
     }
 }

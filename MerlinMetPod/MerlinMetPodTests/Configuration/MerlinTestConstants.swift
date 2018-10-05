@@ -9,6 +9,11 @@
 import Foundation
 
 struct MerlinTestConstants {
+    
+    struct General {
+        static let urlTest = "met.url.com"
+    }
+    
     struct StatusCode {
         static let successCodeResponse = 200
         static let failureCodeResponse = 401
@@ -16,5 +21,7 @@ struct MerlinTestConstants {
     struct AssertsMessage {
         static let failureResponse = "The response should be a failure"
         static let successResponse = "The response should be success"
+        static let equalValues = "The values should be equals"
+        static let notNilValue = "The value not should be nil"
     }
 }

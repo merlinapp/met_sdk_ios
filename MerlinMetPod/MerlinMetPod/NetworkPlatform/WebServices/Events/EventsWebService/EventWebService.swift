@@ -9,7 +9,7 @@
 import Foundation
 
 class EventWebService: BaseWebService, EventWebServiceProtocol {
-    private var networkProvider: EventNetworkProvider
+    var networkProvider: EventNetworkProvider
     
     init?(eventCustomClosure: EventCustomClosure? = nil) {
         if let customClosure = eventCustomClosure {
