@@ -9,7 +9,7 @@
 import Foundation
 
 class EventRepository: EventRepositoryProtocol {
-    private var eventWebService: EventWebServiceProtocol
+    var eventWebService: EventWebServiceProtocol
     init(webServiceLocator: WebServiceLocator) {
         let locator = webServiceLocator
         eventWebService = locator.getWebService(ofType: EventWebServiceProtocol.self)!
