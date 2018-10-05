@@ -24,5 +24,5 @@ class CustomClosureBuilder: NSObject {
                             httpHeaderFields: target.headers)
         }
         return customClosure
-}
+    }
 }
