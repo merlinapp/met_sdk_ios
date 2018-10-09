@@ -12,6 +12,7 @@ public class MetEventProperties: Codable {
     public var eventName: String?
     public var eventCategory: String?
     public var screenName: String?
+    public var userRole: String?
     public var idEvent: String?
     public var idUser: String?
     public var idJob: String?
