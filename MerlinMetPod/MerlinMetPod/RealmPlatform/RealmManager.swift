@@ -30,14 +30,13 @@
             realm = getRealmInstance()!
         }
         func applyMigration() {
-            let version = UInt64(truncating: MerlinMetConfiguration.shared.realmVersion)
-            let config: Realm.Configuration = Realm.Configuration(inMemoryIdentifier:"identifier", schemaVersion: version ,  migrationBlock: { migration, oldSchemaVersion in
-                
-                if (oldSchemaVersion < version){
-                    
-                }
-                
-            })
+            var config = Realm.Configuration()
+            if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+                config.inMemoryIdentifier = "test"
+            } else {
+                config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("events.realm")
+            }
+            
             Realm.Configuration.defaultConfiguration = config
         }
         
