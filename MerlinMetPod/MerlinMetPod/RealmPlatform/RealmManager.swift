@@ -11,27 +11,44 @@
     
     class RealmManager {
         
-        var realm: Realm!
+        private var realm: Realm!
         private var config = Realm.Configuration()
-        static let shared = RealmManager()
-        var sendBatchEvents: (() -> Void)?
-        var sendSingleEventNow: (() -> Void)?
+        private static var instance: RealmManager?
         
-        private func getRealmInstance() -> Realm? {
-            if realm == nil {
+        static var shared: RealmManager {
+            if instance == nil {
+                instance = RealmManager()
+            }
+            
+            if instance!.realm == nil {
                 do {
-                    let realmInstance = try Realm.init(configuration: config)
-                    return realmInstance
+                    let realmInstance = try Realm.init(configuration: instance!.config)
+                    instance!.realm =  realmInstance
                 } catch let error as NSError {
                     assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
                 }
-                return nil
             }
-            return realm
+            return instance!
         }
+        
+        var sendBatchEvents: (() -> Void)?
+        var sendSingleEventNow: (() -> Void)?
+        
+//        private func getRealmInstance() -> Realm? {
+//            if realm == nil {
+//                do {
+//                    let realmInstance = try Realm.init(configuration: config)
+//                    return realmInstance
+//                } catch let error as NSError {
+//                    assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
+//                }
+//                return nil
+//            }
+//            return realm
+//        }
         init() {
             applyMigration()
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
         }
         func applyMigration() {
             
@@ -51,14 +68,14 @@
         }
         
         func getAllWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) -> Results<T> {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             var list: Results<T>? = nil
             list = realm.objects(Class).filter(equalParam)
             return list!
         }
         
         func markWithBatchID(_ batchID: String?, event: RealmEvent) {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             do {
                 try realm.write {
                     event.batchId = batchID
@@ -70,7 +87,7 @@
         }
         
         func addObject(object: Object, update: Bool = false) {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             do {
                 try realm.write {
                     realm.add(object, update: update)
@@ -86,7 +103,7 @@
         }
         
         func deleteWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             realm.beginWrite()
             let realmResults = realm.objects(Class).filter(equalParam)
             if !realmResults.isEmpty {
@@ -98,7 +115,7 @@
         }
         
         func deleteAllObject <T: Object> (Class: T.Type) {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             
             let realmResults = realm.objects(Class)
             if(!realmResults.isEmpty) {
@@ -113,7 +130,7 @@
         }
         
         func deleteSingleObject <T: Object> (Class: T.Type, value: Object) -> Void {
-            realm = getRealmInstance()!
+//            realm = getRealmInstance()!
             realm.beginWrite()
             realm.delete(value)
             try! realm.commitWrite()
