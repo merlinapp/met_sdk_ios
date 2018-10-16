@@ -1,44 +1,47 @@
-    //
-    //  RealmManager.swift
-    //  MerlinMetPod
-    //
-    //  Created by Mario Acero on 9/5/18.
-    //  Copyright © 2018 Camila Gaitan Mosquera. All rights reserved.
-    //
+//  RealmManager.swift
+//  MerlinMetPod
+//
+//  Created by Mario Acero on 9/5/18.
+//  Copyright © 2018 Camila Gaitan Mosquera. All rights reserved.
+
+import Foundation
+import RealmSwift
     
-    import Foundation
-    import RealmSwift
-    
-    class RealmManager {
+class RealmManager {
         
-        var realm: Realm!
-        static let shared = RealmManager()
+        private var realm: Realm!
+        private var config = Realm.Configuration()
+        private static var instance: RealmManager?
+        
+        static var shared: RealmManager {
+            if instance == nil {
+                instance = RealmManager()
+            }
+            
+            if instance!.realm == nil {
+                do {
+                    let realmInstance = try Realm.init(configuration: instance!.config)
+                    instance!.realm = realmInstance
+                } catch let error as NSError {
+                    assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
+                }
+            }
+            return instance!
+        }
+        
         var sendBatchEvents: (() -> Void)?
         var sendSingleEventNow: (() -> Void)?
         
-        private func getRealmInstance() -> Realm? {
-            do {
-                let realmInstance = try Realm()
-                return realmInstance
-            } catch let error as NSError {
-                assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
-            }
-            return nil
-        }
         init() {
             applyMigration()
-            realm = getRealmInstance()!
         }
         func applyMigration() {
-            let version = UInt64(truncating: MerlinMetConfiguration.shared.realmVersion)
-            let config: Realm.Configuration = Realm.Configuration(inMemoryIdentifier:"identifier", schemaVersion: version ,  migrationBlock: { migration, oldSchemaVersion in
-                
-                if (oldSchemaVersion < version){
-                    
-                }
-                
-            })
-            Realm.Configuration.defaultConfiguration = config
+            
+            if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+                config.inMemoryIdentifier = "test"
+            } else {
+                config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("events.realm")
+            }
         }
         
         func getAll <T: Object> (Class: T.Type) -> Results<T> {
@@ -48,14 +51,12 @@
         }
         
         func getAllWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) -> Results<T> {
-            realm = getRealmInstance()!
             var list: Results<T>? = nil
             list = realm.objects(Class).filter(equalParam)
             return list!
         }
         
         func markWithBatchID(_ batchID: String?, event: RealmEvent) {
-            realm = getRealmInstance()!
             do {
                 try realm.write {
                     event.batchId = batchID
@@ -67,7 +68,6 @@
         }
         
         func addObject(object: Object, update: Bool = false) {
-            realm = getRealmInstance()!
             do {
                 try realm.write {
                     realm.add(object, update: update)
@@ -83,7 +83,6 @@
         }
         
         func deleteWithPredicate <T: Object> (Class: T.Type, equalParam: NSPredicate) {
-            realm = getRealmInstance()!
             realm.beginWrite()
             let realmResults = realm.objects(Class).filter(equalParam)
             if !realmResults.isEmpty {
@@ -95,8 +94,6 @@
         }
         
         func deleteAllObject <T: Object> (Class: T.Type) {
-            realm = getRealmInstance()!
-            
             let realmResults = realm.objects(Class)
             if(!realmResults.isEmpty) {
                 for object in realmResults {
@@ -110,9 +107,8 @@
         }
         
         func deleteSingleObject <T: Object> (Class: T.Type, value: Object) -> Void {
-            realm = getRealmInstance()!
             realm.beginWrite()
             realm.delete(value)
             try! realm.commitWrite()
         }
-    }
+}
