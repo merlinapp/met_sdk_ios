@@ -41,7 +41,7 @@
                 config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("events.realm")
             }
             
-            Realm.Configuration.defaultConfiguration = config
+//            Realm.Configuration.defaultConfiguration = config
         }
         
         func getAll <T: Object> (Class: T.Type) -> Results<T> {
