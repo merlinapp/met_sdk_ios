@@ -21,7 +21,7 @@ public class MerlinMetConfiguration: NSObject {
     var URL: String = ""
 
     var eventHeader: MetEventCommon?
-    var totalBatchGroup: Int = 10
+    var totalBatchGroup: Int = 30
     
     // Use this properties only for UT propose
     var sendEventCustomClosureTest: EventCustomClosure?
