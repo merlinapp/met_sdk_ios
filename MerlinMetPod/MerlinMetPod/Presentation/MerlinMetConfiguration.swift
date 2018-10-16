@@ -19,6 +19,8 @@ public class MerlinMetConfiguration: NSObject {
     }
     
     var URL: String = ""
+    var realmVersion: NSNumber = 0
+
     var eventHeader: MetEventCommon?
     var totalBatchGroup: Int = 10
     
@@ -30,9 +32,10 @@ public class MerlinMetConfiguration: NSObject {
         super.init()
     }
     
-    public func setup(URL: String, eventHeader: MetEventCommon ) {
+    public func setup(URL: String, eventHeader: MetEventCommon, realmVersion: NSNumber) {
         self.URL = URL
         self.eventHeader = eventHeader
+        self.realmVersion = realmVersion
     }
     
     public func saveEvent(eventString: String) {
