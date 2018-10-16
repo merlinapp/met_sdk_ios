@@ -12,6 +12,7 @@
     class RealmManager {
         
         var realm: Realm!
+        private var config = Realm.Configuration()
         static let shared = RealmManager()
         var sendBatchEvents: (() -> Void)?
         var sendSingleEventNow: (() -> Void)?
@@ -19,7 +20,7 @@
         private func getRealmInstance() -> Realm? {
             if realm == nil {
                 do {
-                    let realmInstance = try Realm()
+                    let realmInstance = try Realm.init(configuration: config)
                     return realmInstance
                 } catch let error as NSError {
                     assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
@@ -33,7 +34,7 @@
             realm = getRealmInstance()!
         }
         func applyMigration() {
-            var config = Realm.Configuration()
+            
             if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
                 config.inMemoryIdentifier = "test"
             } else {
