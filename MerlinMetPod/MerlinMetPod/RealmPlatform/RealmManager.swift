@@ -17,13 +17,16 @@
         var sendSingleEventNow: (() -> Void)?
         
         private func getRealmInstance() -> Realm? {
-            do {
-                let realmInstance = try Realm()
-                return realmInstance
-            } catch let error as NSError {
-                assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
+            if realm == nil {
+                do {
+                    let realmInstance = try Realm()
+                    return realmInstance
+                } catch let error as NSError {
+                    assertionFailure("Somethig went wrong with Realm, error = \(error.description)")
+                }
+                return nil
             }
-            return nil
+            return realm
         }
         init() {
             applyMigration()
