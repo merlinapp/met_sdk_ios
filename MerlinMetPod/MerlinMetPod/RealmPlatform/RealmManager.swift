@@ -31,7 +31,7 @@
         }
         func applyMigration() {
             let version = UInt64(truncating: MerlinMetConfiguration.shared.realmVersion)
-            let config: Realm.Configuration = Realm.Configuration(inMemoryIdentifier:"", schemaVersion: version ,  migrationBlock: { migration, oldSchemaVersion in
+            let config: Realm.Configuration = Realm.Configuration(inMemoryIdentifier:"identifier", schemaVersion: version ,  migrationBlock: { migration, oldSchemaVersion in
                 
                 if (oldSchemaVersion < version){
                     
