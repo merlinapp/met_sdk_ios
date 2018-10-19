@@ -40,6 +40,9 @@ class RealmManager {
             if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
                 config.inMemoryIdentifier = "test"
             } else {
+                config = Realm.Configuration(inMemoryIdentifier: ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"],
+                                             schemaVersion: UInt64(truncating: 0),
+                                             objectTypes: [RealmEvent.self])
                 config.fileURL = config.fileURL?.deletingLastPathComponent().appendingPathComponent("events.realm")
             }
         }
