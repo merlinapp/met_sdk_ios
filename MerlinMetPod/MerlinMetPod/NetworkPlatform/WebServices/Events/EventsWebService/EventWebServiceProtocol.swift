@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum EventResponse {
+public enum EventResponse {
     case success
     case failure
 }
-typealias EventResponseClosure = (EventResponse) -> Void
+public typealias EventResponseClosure = (EventResponse) -> Void
 
 protocol EventWebServiceProtocol {
     func sendEvent(eventObject: MetEvent, completion: @escaping (EventResponseClosure))

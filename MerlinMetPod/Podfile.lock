@@ -1,25 +1,25 @@
 PODS:
-  - Alamofire (4.8.2)
-  - Moya (12.0.1):
-    - Moya/Core (= 12.0.1)
-  - Moya/Core (12.0.1):
+  - Alamofire (4.9.1)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - Realm (3.14.0):
-    - Realm/Headers (= 3.14.0)
-  - Realm/Headers (3.14.0)
-  - RealmSwift (3.14.0):
-    - Realm (= 3.14.0)
+    - Result (~> 4.1)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
   - Result (4.1.0)
-  - SwiftLint (0.31.0)
+  - SwiftLint (0.38.0)
 
 DEPENDENCIES:
-  - Moya
-  - RealmSwift
-  - SwiftLint
+  - Moya (= 13.0.1)
+  - RealmSwift (= 3.17.3)
+  - SwiftLint (= 0.38.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Moya
     - Realm
@@ -28,13 +28,13 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  Realm: 221b25919bb5a010a3c597d707f8df3492dcd93a
-  RealmSwift: 28f22dfa6a27b9a778cfb09471558b6afcf1022c
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
 
-PODFILE CHECKSUM: c3e4dda2dec8994de82b7123928502a1a54aec46
+PODFILE CHECKSUM: 5003839b87376ecc5e31661e8256edb09a3b878d
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
