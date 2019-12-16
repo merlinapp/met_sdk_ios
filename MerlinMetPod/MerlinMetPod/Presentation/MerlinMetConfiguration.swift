@@ -79,7 +79,7 @@ public class MerlinMetConfiguration: NSObject {
         }
     }
     
-    public func sendBatchEvents(completion: ((Bool)->Void)?) {
+    public func sendBatchEvents(completion: EventResponseClosure?) {
         let predicate = NSPredicate(format: "batchId == nil")
         let batchID = UUID().uuidString
         let eventsObjectToSend = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
@@ -88,7 +88,7 @@ public class MerlinMetConfiguration: NSObject {
         var arrayEvents: [Any] = []
         
         if totalEventsToSend == 0 {
-            completion?(true)
+            completion?(EventResponse.success)
             return
         }
         
@@ -123,7 +123,6 @@ public class MerlinMetConfiguration: NSObject {
             switch response {
             case .success:
                 RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: predicate)
-                completion?(true)
                 strongSelf.closureForTestResponse?(true)
             case . failure:
                 let eventsObjectFailure = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
@@ -131,9 +130,9 @@ public class MerlinMetConfiguration: NSObject {
                     let eventObject = eventsObjectFailure[0]
                     RealmManager.shared.markWithBatchID(nil, event: eventObject)
                 }
-                completion?(false)
                 strongSelf.closureForTestResponse?(false)
             }
+            completion?(response)
         }
     }
     
