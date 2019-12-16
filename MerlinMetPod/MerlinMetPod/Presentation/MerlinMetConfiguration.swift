@@ -70,7 +70,7 @@ public class MerlinMetConfiguration: NSObject {
         RealmManager.shared.sendBatchEvents = {[weak self] () in
             guard let strongSelf = self else { return }
             
-            strongSelf.sendBatchEvents()
+            strongSelf.sendBatchEvents(completion: nil)
         }
         
         RealmManager.shared.sendSingleEventNow = {[weak self] () in
@@ -79,17 +79,18 @@ public class MerlinMetConfiguration: NSObject {
         }
     }
     
-    public func forceSend() {
-        sendBatchEvents()
-    }
-    
-    func sendBatchEvents() {
+    public func sendBatchEvents(completion: ((Bool)->Void)?) {
         let predicate = NSPredicate(format: "batchId == nil")
         let batchID = UUID().uuidString
         let eventsObjectToSend = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
         let totalEventsToSend = eventsObjectToSend.count
         
         var arrayEvents: [Any] = []
+        
+        if totalEventsToSend == 0 {
+            completion?(true)
+            return
+        }
         
         for _ in 0..<totalEventsToSend {
             let eventObject = eventsObjectToSend[0]
@@ -122,6 +123,7 @@ public class MerlinMetConfiguration: NSObject {
             switch response {
             case .success:
                 RealmManager.shared.deleteWithPredicate(Class: RealmEvent.self, equalParam: predicate)
+                completion?(true)
                 strongSelf.closureForTestResponse?(true)
             case . failure:
                 let eventsObjectFailure = RealmManager.shared.getAllWithPredicate(Class: RealmEvent.self, equalParam: predicate)
@@ -129,6 +131,7 @@ public class MerlinMetConfiguration: NSObject {
                     let eventObject = eventsObjectFailure[0]
                     RealmManager.shared.markWithBatchID(nil, event: eventObject)
                 }
+                completion?(false)
                 strongSelf.closureForTestResponse?(false)
             }
         }

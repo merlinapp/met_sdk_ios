@@ -4,13 +4,13 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'MerlinMetPod' do
 
   use_frameworks!
-  pod 'SwiftLint'
-  pod 'Moya'
-  pod 'RealmSwift'
+  pod 'SwiftLint', '0.38.0'
+  pod 'Moya', '13.0.1'
+  pod 'RealmSwift', '3.17.3'
 
   target 'MerlinMetPodTests' do
     inherit! :search_paths
-    pod 'Moya'
+    pod 'Moya', '13.0.1'
   end
 
 end
