@@ -63,7 +63,7 @@ class RealmManager {
             do {
                 try realm.write {
                     event.batchId = batchID
-                    realm.add(event, update: true)
+                    realm.add(event, update: Realm.UpdatePolicy.all)
                 }
             } catch let error as NSError {
                 assertionFailure("Somethig went wrong with Realm (Write), error = \(error.description)")
@@ -73,7 +73,7 @@ class RealmManager {
         func addObject(object: Object, update: Bool = false) {
             do {
                 try realm.write {
-                    realm.add(object, update: update)
+                    realm.add(object, update: Realm.UpdatePolicy.all)
                 }
             } catch let error as NSError {
                 assertionFailure("Somethig went wrong with Realm (Write), error = \(error.description)")
